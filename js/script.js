@@ -38,6 +38,51 @@ const translations = {
     approachText:"KALY privilégie la description et la compréhension du contexte. Pas de compteur de calories obligatoire, de séries à maintenir ni de classement des aliments comme « bons » ou « mauvais ».",
     approachNote:"L’objectif est de disposer d’informations plus structurées pour mieux décrire son expérience et, si on le souhaite, en discuter avec un professionnel de santé.",
     disclaimer:"KALY est présenté ici comme un projet d’application. Les informations et tendances affichées ont vocation à soutenir l’observation et le dialogue ; elles ne constituent ni un diagnostic ni une recommandation médicale et ne démontrent pas de lien de causalité.",
+    legalBack:"Retour au site", navContact:"Contact",
+    contactEyebrow:"CONTACT",
+    contactTitle:"Une question sur KALY ?",
+    contactIntro:"Pour toute question sur le projet ou le site, vous pouvez nous écrire à l’aide du formulaire.",
+    contactName:"Nom",
+    contactEmail:"Adresse e-mail",
+    contactSubject:"Objet",
+    contactMessage:"Message",
+    contactSend:"Préparer le message",
+    contactPrivacy:"Les informations saisies servent uniquement à répondre à votre demande. N’envoyez pas de données de santé ou d’informations médicales sensibles.",
+    contactMailFallback:"Vous pouvez également écrire à",
+    footerLegal:"Mentions légales",
+    footerPrivacy:"Politique de confidentialité",
+    formEmailSubject:"Demande depuis le site KALY",
+    legalPageTitle:"Mentions légales",
+    legalEditorHeading:"Éditeur du site",
+    legalEditorText:"KALY est un projet en cours de développement. Éditeur / responsable de publication : [NOM ET PRÉNOM OU DÉNOMINATION À COMPLÉTER]. Adresse : [ADRESSE POSTALE À COMPLÉTER]. Contact : contact@kalyfn.com. Ces informations doivent être complétées avant la mise en ligne définitive.",
+    legalActivityHeading:"Activité du site",
+    legalActivityText:"Ce site est un site de présentation du projet KALY. Il ne propose pas, à ce stade, de service de diagnostic, de conseil médical ou de prise en charge médicale.",
+    legalHostHeading:"Hébergement",
+    legalHostText:"Site hébergé par Cloudflare Pages, service fourni par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis. Téléphone : +1 888 993 5273.",
+    legalIPHeading:"Propriété intellectuelle",
+    legalIPText:"Sauf mention contraire, les éléments du site KALY (textes, identité visuelle, logo, mascotte et éléments graphiques) sont protégés par les règles applicables en matière de propriété intellectuelle. Toute reproduction ou réutilisation non autorisée est interdite.",
+    legalUpdateHeading:"Mise à jour",
+    legalUpdateText:"Les présentes mentions peuvent être modifiées pour refléter l’évolution du projet, de son éditeur ou de ses services.",
+    privacyPageTitle:"Politique de confidentialité",
+    privacyControllerHeading:"Responsable du traitement",
+    privacyControllerText:"Le responsable du traitement est : [NOM ET PRÉNOM OU DÉNOMINATION À COMPLÉTER]. Contact : contact@kalyfn.com. Cette identité doit être complétée avant la mise en ligne définitive.",
+    privacyDataHeading:"Données traitées",
+    privacyDataText:"Lorsque vous utilisez le formulaire de contact, les informations que vous choisissez de fournir peuvent inclure votre nom, votre adresse e-mail, l’objet et le contenu de votre message. Évitez d’y inscrire des données de santé ou des informations médicales sensibles.",
+    privacyPurposeHeading:"Finalité et base juridique",
+    privacyPurposeText:"Ces informations sont utilisées uniquement pour recevoir, examiner et traiter votre demande, puis vous répondre. Le traitement repose sur l’intérêt légitime à répondre aux sollicitations adressées au projet KALY.",
+    privacyFormHeading:"Fonctionnement du formulaire",
+    privacyFormText:"Le formulaire de ce site ne transmet pas directement les données à un serveur KALY. Lorsque vous cliquez sur « Préparer le message », votre application de messagerie s’ouvre avec un e-mail prérempli à destination de contact@kalyfn.com. Vous gardez la possibilité de vérifier, modifier ou annuler l’envoi. Si vous envoyez le message, celui-ci est traité par les services de messagerie utilisés pour son acheminement et sa réception.",
+    privacyRecipientsHeading:"Destinataires",
+    privacyRecipientsText:"Les messages envoyés sont accessibles aux personnes chargées de gérer les demandes reçues à l’adresse contact@kalyfn.com ainsi qu’aux prestataires techniques de messagerie nécessaires à leur acheminement. L’hébergeur du site peut traiter des données techniques de connexion et de sécurité dans le cadre de la fourniture du service.",
+    privacyRetentionHeading:"Durée de conservation",
+    privacyRetentionText:"Les messages sont conservés pendant le temps nécessaire au traitement de la demande et à son suivi, puis supprimés ou archivés lorsque cela est nécessaire. Une durée opérationnelle précise doit être définie par l’éditeur et appliquée à la boîte de réception avant la publication définitive.",
+    privacyRightsHeading:"Vos droits",
+    privacyRightsText:"Conformément à la réglementation applicable, vous pouvez demander l’accès à vos données, leur rectification, leur effacement ou la limitation du traitement, et vous opposer au traitement lorsque les conditions sont réunies. Pour exercer vos droits : contact@kalyfn.com. Vous pouvez également introduire une réclamation auprès de la CNIL.",
+    privacyCookiesHeading:"Cookies et mesure d’audience",
+    privacyCookiesText:"Le site de présentation n’intègre pas volontairement, à ce stade, d’outil publicitaire ou de mesure d’audience tiers. Les services techniques d’hébergement peuvent toutefois traiter certaines données nécessaires à la sécurité et au fonctionnement du site.",
+    privacyChangesHeading:"Mise à jour de la politique",
+    privacyChangesText:"Cette politique pourra être mise à jour si le formulaire, les outils utilisés ou les traitements de données évoluent.",
+
     footerLine:"Food Noise & Metabolic Tracking"
   },
   es: {
@@ -79,6 +124,51 @@ const translations = {
     approachText:"KALY prioriza la descripción y la comprensión del contexto. No exige contar calorías, mantener rachas de actividad ni clasificar los alimentos como «buenos» o «malos».",
     approachNote:"El objetivo es disponer de información más estructurada para describir mejor la propia experiencia y, si se desea, comentarla con un profesional sanitario.",
     disclaimer:"KALY se presenta aquí como un proyecto de aplicación. La información y las tendencias mostradas pretenden apoyar la observación y el diálogo; no constituyen un diagnóstico ni una recomendación médica y no demuestran relaciones de causalidad.",
+    legalBack:"Volver al sitio", navContact:"Contacto",
+    contactEyebrow:"CONTACTO",
+    contactTitle:"¿Tienes alguna pregunta sobre KALY?",
+    contactIntro:"Si tienes preguntas sobre el proyecto o el sitio web, puedes escribirnos mediante el formulario.",
+    contactName:"Nombre",
+    contactEmail:"Correo electrónico",
+    contactSubject:"Asunto",
+    contactMessage:"Mensaje",
+    contactSend:"Preparar mensaje",
+    contactPrivacy:"La información ingresada se utiliza únicamente para responder tu consulta. No envíes datos de salud ni información médica sensible.",
+    contactMailFallback:"También puedes escribir a",
+    footerLegal:"Aviso legal",
+    footerPrivacy:"Política de privacidad",
+    formEmailSubject:"Consulta desde el sitio web de KALY",
+    legalPageTitle:"Aviso legal",
+    legalEditorHeading:"Titular del sitio",
+    legalEditorText:"KALY es un proyecto en desarrollo. Titular / responsable de la publicación: [COMPLETAR NOMBRE Y APELLIDO O RAZÓN SOCIAL]. Dirección: [COMPLETAR DOMICILIO POSTAL]. Contacto: contact@kalyfn.com. Esta información debe completarse antes de la publicación definitiva.",
+    legalActivityHeading:"Actividad del sitio",
+    legalActivityText:"Este sitio presenta el proyecto KALY. Por el momento, no ofrece servicios de diagnóstico, asesoramiento médico ni atención sanitaria.",
+    legalHostHeading:"Alojamiento",
+    legalHostText:"Sitio alojado en Cloudflare Pages, servicio proporcionado por Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, Estados Unidos. Teléfono: +1 888 993 5273.",
+    legalIPHeading:"Propiedad intelectual",
+    legalIPText:"Salvo que se indique lo contrario, los contenidos del sitio KALY (textos, identidad visual, logotipo, mascota y elementos gráficos) están protegidos por las normas aplicables de propiedad intelectual. No se permite su reproducción o reutilización sin autorización.",
+    legalUpdateHeading:"Actualizaciones",
+    legalUpdateText:"Este aviso legal puede modificarse para reflejar cambios en el proyecto, su titular o sus servicios.",
+    privacyPageTitle:"Política de privacidad",
+    privacyControllerHeading:"Responsable del tratamiento",
+    privacyControllerText:"El responsable del tratamiento es: [COMPLETAR NOMBRE Y APELLIDO O RAZÓN SOCIAL]. Contacto: contact@kalyfn.com. Esta identidad debe completarse antes de la publicación definitiva.",
+    privacyDataHeading:"Datos tratados",
+    privacyDataText:"Al utilizar el formulario de contacto, los datos que decidas proporcionar pueden incluir tu nombre, correo electrónico, asunto y contenido del mensaje. Evita incluir datos de salud o información médica sensible.",
+    privacyPurposeHeading:"Finalidad y base jurídica",
+    privacyPurposeText:"Esta información se utiliza únicamente para recibir, revisar y responder tu consulta. El tratamiento se basa en el interés legítimo de responder a las solicitudes dirigidas al proyecto KALY.",
+    privacyFormHeading:"Funcionamiento del formulario",
+    privacyFormText:"El formulario no envía directamente los datos a un servidor de KALY. Al hacer clic en «Preparar mensaje», se abre tu aplicación de correo con un mensaje precompletado dirigido a contact@kalyfn.com. Puedes revisarlo, modificarlo o cancelar el envío. Si lo envías, los servicios de correo utilizados para transmitirlo y recibirlo tratarán el mensaje.",
+    privacyRecipientsHeading:"Destinatarios",
+    privacyRecipientsText:"Los mensajes enviados son accesibles para las personas encargadas de gestionar las consultas recibidas en contact@kalyfn.com y para los proveedores de correo necesarios para su envío y recepción. El proveedor de alojamiento puede tratar datos técnicos de conexión y seguridad para prestar el servicio.",
+    privacyRetentionHeading:"Plazo de conservación",
+    privacyRetentionText:"Los mensajes se conservan durante el tiempo necesario para gestionar la consulta y su seguimiento, y después se eliminan o archivan cuando corresponda. El titular debe definir y aplicar un plazo operativo concreto en el buzón antes de la publicación definitiva.",
+    privacyRightsHeading:"Tus derechos",
+    privacyRightsText:"De acuerdo con la normativa aplicable, puedes solicitar el acceso, rectificación, eliminación o limitación del tratamiento de tus datos, y oponerte al tratamiento cuando corresponda. Para ejercer tus derechos: contact@kalyfn.com. También puedes presentar una reclamación ante la autoridad de protección de datos competente.",
+    privacyCookiesHeading:"Cookies y medición de audiencia",
+    privacyCookiesText:"Por el momento, el sitio de presentación no incorpora deliberadamente herramientas publicitarias ni servicios externos de medición de audiencia. El proveedor técnico de alojamiento puede tratar ciertos datos necesarios para la seguridad y el funcionamiento del sitio.",
+    privacyChangesHeading:"Actualizaciones de esta política",
+    privacyChangesText:"Esta política podrá actualizarse si cambian el formulario, las herramientas utilizadas o los tratamientos de datos.",
+
     footerLine:"Food Noise & Metabolic Tracking"
   },
   en: {
@@ -120,6 +210,51 @@ const translations = {
     approachText:"KALY prioritises description and context. No mandatory calorie counter, streaks to maintain or labels that classify foods as “good” or “bad”.",
     approachNote:"The aim is to provide more structured information to describe personal experience and, if desired, discuss it with a health professional.",
     disclaimer:"KALY is presented here as an app project. The information and patterns shown are intended to support observation and dialogue; they are not a diagnosis or medical recommendation and do not establish causality.",
+    legalBack:"Back to website", navContact:"Contact",
+    contactEyebrow:"CONTACT",
+    contactTitle:"Questions about KALY?",
+    contactIntro:"For questions about the project or this website, you can write to us using the form.",
+    contactName:"Name",
+    contactEmail:"Email address",
+    contactSubject:"Subject",
+    contactMessage:"Message",
+    contactSend:"Prepare message",
+    contactPrivacy:"The information you enter is used only to respond to your enquiry. Do not send health data or sensitive medical information.",
+    contactMailFallback:"You can also email",
+    footerLegal:"Legal notice",
+    footerPrivacy:"Privacy policy",
+    formEmailSubject:"Enquiry from the KALY website",
+    legalPageTitle:"Legal notice",
+    legalEditorHeading:"Website publisher",
+    legalEditorText:"KALY is a project under development. Publisher / publication director: [ADD FULL NAME OR LEGAL ENTITY]. Address: [ADD POSTAL ADDRESS]. Contact: contact@kalyfn.com. This information must be completed before final publication.",
+    legalActivityHeading:"Website purpose",
+    legalActivityText:"This website presents the KALY project. At this stage, it does not provide diagnosis, medical advice or healthcare services.",
+    legalHostHeading:"Hosting",
+    legalHostText:"Website hosted on Cloudflare Pages, a service provided by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. Phone: +1 888 993 5273.",
+    legalIPHeading:"Intellectual property",
+    legalIPText:"Unless otherwise stated, the KALY website materials (text, visual identity, logo, mascot and graphic elements) are protected by applicable intellectual property laws. Reproduction or reuse without permission is prohibited.",
+    legalUpdateHeading:"Updates",
+    legalUpdateText:"This legal notice may be updated to reflect changes to the project, its publisher or its services.",
+    privacyPageTitle:"Privacy policy",
+    privacyControllerHeading:"Data controller",
+    privacyControllerText:"The data controller is: [ADD FULL NAME OR LEGAL ENTITY]. Contact: contact@kalyfn.com. This identity must be completed before final publication.",
+    privacyDataHeading:"Data processed",
+    privacyDataText:"When you use the contact form, the information you choose to provide may include your name, email address, subject and message content. Do not include health data or sensitive medical information.",
+    privacyPurposeHeading:"Purpose and legal basis",
+    privacyPurposeText:"This information is used only to receive, review and respond to your enquiry. The processing is based on the legitimate interest in responding to enquiries sent to the KALY project.",
+    privacyFormHeading:"How the form works",
+    privacyFormText:"The form does not send data directly to a KALY server. When you click “Prepare message”, your email application opens with a pre-filled email addressed to contact@kalyfn.com. You can review, edit or cancel it. If you send it, the email services used to transmit and receive it will process the message.",
+    privacyRecipientsHeading:"Recipients",
+    privacyRecipientsText:"Sent messages are accessible to the people managing enquiries received at contact@kalyfn.com and to the email providers needed to send and receive them. The website host may process technical connection and security data to provide the service.",
+    privacyRetentionHeading:"Retention period",
+    privacyRetentionText:"Messages are kept for as long as necessary to handle the enquiry and any follow-up, then deleted or archived where appropriate. The publisher must define and apply a specific operational retention period in the mailbox before final publication.",
+    privacyRightsHeading:"Your rights",
+    privacyRightsText:"Under applicable data protection law, you may request access to, rectification or erasure of your data, restriction of processing, and object to processing where applicable. To exercise your rights: contact@kalyfn.com. You may also lodge a complaint with the relevant data protection authority.",
+    privacyCookiesHeading:"Cookies and audience measurement",
+    privacyCookiesText:"At this stage, the presentation website does not intentionally include advertising tools or third-party audience measurement services. The technical hosting provider may process certain data necessary for website security and operation.",
+    privacyChangesHeading:"Policy updates",
+    privacyChangesText:"This policy may be updated if the contact form, tools used or data processing activities change.",
+
     footerLine:"Food Noise & Metabolic Tracking"
   }
 };
@@ -146,14 +281,16 @@ function setLanguage(lang) {
   const banner = document.getElementById("banner-image");
   const bannerSource = document.getElementById("banner-source");
   const path = bannerByLanguage[lang];
-  if (path) {
-    banner.src = path;
-    bannerSource.srcset = path;
-    banner.alt = lang === "es" ? "Banner de presentación de KALY en español" : "Bandeau de présentation de KALY en français";
-    banner.closest("picture").hidden = false;
-  } else {
-    // English uses the mascot-led visual; no French or Spanish embedded text is shown.
-    banner.closest("picture").hidden = true;
+  if (banner && bannerSource) {
+    if (path) {
+      banner.src = path;
+      bannerSource.srcset = path;
+      banner.alt = lang === "es" ? "Banner de presentación de KALY en español" : "Bandeau de présentation de KALY en français";
+      banner.closest("picture").hidden = false;
+    } else {
+      // English uses the mascot-led visual; no French or Spanish embedded text is shown.
+      banner.closest("picture").hidden = true;
+    }
   }
 }
 
@@ -163,16 +300,37 @@ document.querySelectorAll(".lang-btn").forEach((button) => {
 
 const menuButton = document.querySelector(".menu-toggle");
 const mobileNav = document.getElementById("mobile-nav");
-menuButton.addEventListener("click", () => {
-  const expanded = menuButton.getAttribute("aria-expanded") === "true";
-  menuButton.setAttribute("aria-expanded", String(!expanded));
-  mobileNav.hidden = expanded;
-});
-mobileNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileNav.hidden = true;
-    menuButton.setAttribute("aria-expanded", "false");
+if (menuButton && mobileNav) {
+  menuButton.addEventListener("click", () => {
+    const expanded = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", String(!expanded));
+    mobileNav.hidden = expanded;
   });
-});
-document.getElementById("year").textContent = new Date().getFullYear();
-setLanguage("fr");
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileNav.hidden = true;
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+const yearNode = document.getElementById("year");
+if (yearNode) yearNode.textContent = new Date().getFullYear();
+
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const subject = data.get("subject") || translations[document.documentElement.lang].formEmailSubject;
+    const body = [
+      "Nom : " + data.get("name"),
+      "E-mail : " + data.get("email"),
+      "",
+      "Message :",
+      data.get("message")
+    ].join("\\n");
+    const mailto = "mailto:contact@kalyfn.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    window.location.href = mailto;
+  });
+}
+setLanguage(document.documentElement.lang || "fr");
