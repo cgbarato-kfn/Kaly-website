@@ -83,6 +83,16 @@ const translations = {
     privacyChangesHeading:"Mise à jour de la politique",
     privacyChangesText:"Cette politique pourra être mise à jour si le formulaire, les outils utilisés ou les traitements de données évoluent.",
 
+    heroPositioning:"Pas de comptage des calories, pas de régime, pas de conseils cliniques : KALY aide à observer et documenter les comportements liés à la nourriture.",
+    howEyebrow:"COMMENT ÇA FONCTIONNE", howTitle:"Un parcours en quatre espaces", howIntro:"KALY organise les informations au fil de l’expérience de l’utilisateur, sans exposer toute l’interface de l’application.",
+    howTrackTitle:"Tracker — Enregistrer un épisode", howTrackText:"L’utilisateur décrit une situation : contexte, pensées, émotions, sensations, intensité, faim ressentie et comportement qui suit.",
+    howProfileTitle:"Profil personnel — Ajouter du contexte", howProfileText:"Un espace rassemble les informations personnelles et les éléments renseignés par l’utilisateur, comme certaines données métaboliques, le sommeil ou les traitements déclarés.",
+    howSummaryTitle:"Résumé des épisodes — Visualiser les observations", howSummaryText:"Les épisodes sont organisés pour consulter leur fréquence, leur intensité, leur contexte et leur évolution au fil du temps.",
+    howProfessionalTitle:"Suivi professionnel — Préparer les échanges", howProfessionalText:"Une synthèse structurée est envisagée pour aider l’utilisateur à partager les informations pertinentes et préparer ses échanges avec les professionnels de santé.",
+    howDevelopment:"Certaines fonctionnalités sont encore en cours de conception. Leur présentation ne signifie pas qu’elles sont déjà disponibles.",
+    proEyebrow:"POUR LES PROFESSIONNELS DE SANTÉ", proTitle:"Des informations structurées pour accompagner le dialogue", proLead:"Le suivi KALY pourrait fournir une vue synthétique des épisodes et des éléments de contexte que l’utilisateur choisit de renseigner et de partager.",
+    proItem1:"Fréquence et intensité des épisodes enregistrés ;", proItem2:"Pensées, émotions, sensations et comportements rapportés ;", proItem3:"Repères temporels et informations contextuelles déclarées ;", proItem4:"Résumé chronologique pour préparer une consultation.", proLimit:"Ces informations constituent des observations déclaratives. Elles ne remplacent pas l’entretien, l’examen ni le jugement clinique du professionnel et ne permettent pas, à elles seules, d’établir un diagnostic ou une causalité.",
+    boundEyebrow:"LE POSITIONNEMENT KALY", boundTitle:"Ce que KALY ne fait pas", boundLead:"KALY n’est pas une application de régime ou de prescription.", bound1:"Pas de comptage des calories ou des macronutriments.", bound2:"Pas de menus, de régimes ni de plans alimentaires.", bound3:"Pas de conseils cliniques ni de recommandations de traitement.", bound4:"Pas de diagnostic médical ni de classement moral des aliments.",
     footerLine:"Food Noise & Metabolic Tracking"
   },
   es: {
@@ -169,6 +179,16 @@ const translations = {
     privacyChangesHeading:"Actualizaciones de esta política",
     privacyChangesText:"Esta política podrá actualizarse si cambian el formulario, las herramientas utilizadas o los tratamientos de datos.",
 
+    heroPositioning:"Sin contar calorías, sin dietas y sin consejos clínicos: KALY ayuda a observar y registrar comportamientos relacionados con la comida.",
+    howEyebrow:"CÓMO FUNCIONA", howTitle:"Un recorrido en cuatro espacios", howIntro:"KALY organiza la información a lo largo de la experiencia del usuario, sin mostrar toda la interfaz de la aplicación.",
+    howTrackTitle:"Tracker — Registrar un episodio", howTrackText:"El usuario describe una situación: contexto, pensamientos, emociones, sensaciones, intensidad, hambre percibida y comportamiento posterior.",
+    howProfileTitle:"Perfil personal — Añadir contexto", howProfileText:"Un espacio reúne información personal y datos introducidos por el usuario, como determinados datos metabólicos, sueño o tratamientos declarados.",
+    howSummaryTitle:"Resumen de episodios — Visualizar los registros", howSummaryText:"Los episodios se organizan para consultar su frecuencia, intensidad, contexto y evolución a lo largo del tiempo.",
+    howProfessionalTitle:"Seguimiento profesional — Preparar el diálogo", howProfessionalText:"Se prevé un resumen estructurado para ayudar al usuario a compartir información pertinente y preparar sus conversaciones con profesionales de salud.",
+    howDevelopment:"Algunas funcionalidades siguen en fase de diseño. Su presentación no significa que ya estén disponibles.",
+    proEyebrow:"PARA PROFESIONALES DE SALUD", proTitle:"Información estructurada para facilitar el diálogo", proLead:"El seguimiento de KALY podría ofrecer una visión resumida de los episodios y del contexto que el usuario decida registrar y compartir.",
+    proItem1:"Frecuencia e intensidad de los episodios registrados;", proItem2:"Pensamientos, emociones, sensaciones y comportamientos descritos;", proItem3:"Referencias temporales e información contextual declarada;", proItem4:"Resumen cronológico para preparar una consulta.", proLimit:"Esta información consiste en observaciones declaradas por el usuario. No sustituye la entrevista, la exploración ni el criterio clínico del profesional y, por sí sola, no permite establecer un diagnóstico ni una relación causal.",
+    boundEyebrow:"EL POSICIONAMIENTO DE KALY", boundTitle:"Lo que KALY no hace", boundLead:"KALY no es una aplicación de dietas ni de prescripción.", bound1:"No cuenta calorías ni macronutrientes.", bound2:"No propone menús, dietas ni planes alimentarios.", bound3:"No ofrece consejos clínicos ni recomendaciones de tratamiento.", bound4:"No realiza diagnósticos médicos ni clasifica moralmente los alimentos.",
     footerLine:"Food Noise & Metabolic Tracking"
   },
   en: {
@@ -255,6 +275,16 @@ const translations = {
     privacyChangesHeading:"Policy updates",
     privacyChangesText:"This policy may be updated if the contact form, tools used or data processing activities change.",
 
+    heroPositioning:"No calorie counting, no diets and no clinical advice: KALY helps observe and record behaviours related to food.",
+    howEyebrow:"HOW IT WORKS", howTitle:"A journey across four spaces", howIntro:"KALY organises information around the user’s experience without revealing the app’s entire interface.",
+    howTrackTitle:"Tracker — Record an episode", howTrackText:"The user describes a situation: context, thoughts, emotions, sensations, intensity, perceived hunger and what happened next.",
+    howProfileTitle:"Personal profile — Add context", howProfileText:"A space brings together personal information and details entered by the user, such as selected metabolic data, sleep or reported treatments.",
+    howSummaryTitle:"Episode summary — View observations", howSummaryText:"Episodes are organised so users can review their frequency, intensity, context and changes over time.",
+    howProfessionalTitle:"Professional follow-up — Prepare discussions", howProfessionalText:"A structured summary is planned to help users share relevant information and prepare discussions with healthcare professionals.",
+    howDevelopment:"Some features are still being designed. Their presentation does not mean they are already available.",
+    proEyebrow:"FOR HEALTHCARE PROFESSIONALS", proTitle:"Structured information to support discussion", proLead:"KALY follow-up could provide a summary of episodes and contextual information that users choose to record and share.",
+    proItem1:"Frequency and intensity of recorded episodes;", proItem2:"Reported thoughts, emotions, sensations and behaviours;", proItem3:"Time references and user-reported contextual information;", proItem4:"A chronological summary to help prepare appointments.", proLimit:"This information consists of user-reported observations. It does not replace a professional’s consultation, examination or clinical judgement and cannot, on its own, establish a diagnosis or causal relationship.",
+    boundEyebrow:"KALY’S POSITIONING", boundTitle:"What KALY does not do", boundLead:"KALY is not a diet or prescribing app.", bound1:"No calorie or macronutrient counting.", bound2:"No menus, diets or meal plans.", bound3:"No clinical advice or treatment recommendations.", bound4:"No medical diagnosis or moral labelling of food.",
     footerLine:"Food Noise & Metabolic Tracking"
   }
 };
