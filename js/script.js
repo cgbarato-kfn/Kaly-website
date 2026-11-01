@@ -143,7 +143,7 @@ const translations = {
     contactEmail:"Correo electrónico",
     contactSubject:"Asunto",
     contactMessage:"Mensaje",
-    contactSend:"Preparar mensaje",
+    contactSend:"Enviar",
     contactPrivacy:"La información ingresada se utiliza únicamente para responder tu consulta. No envíes datos de salud ni información médica sensible.",
     contactMailFallback:"También puedes escribir a",
     footerLegal:"Aviso legal",
