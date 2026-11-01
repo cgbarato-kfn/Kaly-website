@@ -312,20 +312,30 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
 .professional-main-limit{margin:20px 0 0;padding-top:17px;border-top:1px solid rgba(41,61,76,.18);font-size:.9rem;line-height:1.65;color:#52616b}
 @media(max-width:760px){.professional-benefits{grid-template-columns:1fr}.professional-main{margin-top:36px;padding:25px 20px}.professional-benefit{padding:20px;gap:13px}}
 
-/* Contact form - direct email sending */
-.contact-form .contact-status {
-  margin: 12px 0 0;
-  color: #293D4C;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
 
-.contact-form .contact-status:empty {
-  display: none;
+/* V10 — direct contact form submission */
+.form-honeypot {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
-
-.contact-form button:disabled {
-  opacity: 0.65;
+.contact-submit:disabled {
+  opacity: .65;
   cursor: wait;
 }
-
+.contact-status {
+  min-height: 1.5em;
+  margin: 2px 0 0;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.contact-status:empty { display: none; }
+.contact-status.is-pending { color: var(--muted); }
+.contact-status.is-success { color: #386B4B; }
+.contact-status.is-error { color: #A13D36; }
