@@ -49,7 +49,10 @@ const translations = {
     contactMessage:"Message",
     contactSend:"Envoyer",
     contactPrivacy:"Les informations saisies servent uniquement à répondre à votre demande. N’envoyez pas de données de santé ou d’informations médicales sensibles.",
-    contactMailFallback:"Vous pouvez également écrire à",
+    formSending:"Envoi en cours…",
+    formSuccess:"Votre message a été envoyé. Merci.",
+    formError:"L’envoi a échoué. Réessayez plus tard ou écrivez à contact@kalyfn.com.",
+    contactMailFallback:"",
     footerLegal:"Mentions légales",
     footerPrivacy:"Politique de confidentialité",
     formEmailSubject:"Demande depuis le site KALY",
@@ -72,7 +75,7 @@ const translations = {
     privacyPurposeHeading:"Finalité et base juridique",
     privacyPurposeText:"Ces informations sont utilisées uniquement pour recevoir, examiner et traiter votre demande, puis vous répondre. Le traitement repose sur l’intérêt légitime à répondre aux sollicitations adressées au projet KALY.",
     privacyFormHeading:"Fonctionnement du formulaire",
-    privacyFormText:"Le formulaire de ce site ne transmet pas directement les données à un serveur KALY. Lorsque vous cliquez sur « Préparer le message », votre application de messagerie s’ouvre avec un e-mail prérempli à destination de contact@kalyfn.com. Vous gardez la possibilité de vérifier, modifier ou annuler l’envoi. Si vous envoyez le message, celui-ci est traité par les services de messagerie utilisés pour son acheminement et sa réception.",
+    privacyFormText:"Le formulaire transmet les informations saisies à une fonction serveur hébergée sur Cloudflare Pages. Cette fonction utilise l’API Resend pour envoyer le message à contact@kalyfn.com. La clé API est conservée côté serveur et n’est pas exposée dans le navigateur. N’envoyez pas de données de santé ou d’informations médicales sensibles.",
     privacyRecipientsHeading:"Destinataires",
     privacyRecipientsText:"Les messages envoyés sont accessibles aux personnes chargées de gérer les demandes reçues à l’adresse contact@kalyfn.com ainsi qu’aux prestataires techniques de messagerie nécessaires à leur acheminement. L’hébergeur du site peut traiter des données techniques de connexion et de sécurité dans le cadre de la fourniture du service.",
     privacyRetentionHeading:"Durée de conservation",
@@ -145,7 +148,10 @@ const translations = {
     contactMessage:"Mensaje",
     contactSend:"Enviar",
     contactPrivacy:"La información ingresada se utiliza únicamente para responder tu consulta. No envíes datos de salud ni información médica sensible.",
-    contactMailFallback:"También puedes escribir a",
+    formSending:"Enviando…",
+    formSuccess:"Tu mensaje se ha enviado. Gracias.",
+    formError:"No se pudo enviar el mensaje. Inténtalo más tarde o escribe a contact@kalyfn.com.",
+    contactMailFallback:"",
     footerLegal:"Aviso legal",
     footerPrivacy:"Política de privacidad",
     formEmailSubject:"Consulta desde el sitio web de KALY",
@@ -168,7 +174,7 @@ const translations = {
     privacyPurposeHeading:"Finalidad y base jurídica",
     privacyPurposeText:"Esta información se utiliza únicamente para recibir, revisar y responder tu consulta. El tratamiento se basa en el interés legítimo de responder a las solicitudes dirigidas al proyecto KALY.",
     privacyFormHeading:"Funcionamiento del formulario",
-    privacyFormText:"El formulario no envía directamente los datos a un servidor de KALY. Al hacer clic en «Preparar mensaje», se abre tu aplicación de correo con un mensaje precompletado dirigido a contact@kalyfn.com. Puedes revisarlo, modificarlo o cancelar el envío. Si lo envías, los servicios de correo utilizados para transmitirlo y recibirlo tratarán el mensaje.",
+    privacyFormText:"El formulario transmite la información a una función del servidor alojada en Cloudflare Pages. Esta función utiliza la API de Resend para enviar el mensaje a contact@kalyfn.com. La clave API se guarda en el servidor y no se expone en el navegador. No envíes datos de salud ni información médica sensible.",
     privacyRecipientsHeading:"Destinatarios",
     privacyRecipientsText:"Los mensajes enviados son accesibles para las personas encargadas de gestionar las consultas recibidas en contact@kalyfn.com y para los proveedores de correo necesarios para su envío y recepción. El proveedor de alojamiento puede tratar datos técnicos de conexión y seguridad para prestar el servicio.",
     privacyRetentionHeading:"Plazo de conservación",
@@ -241,7 +247,10 @@ const translations = {
     contactMessage:"Message",
     contactSend:"Send",
     contactPrivacy:"The information you enter is used only to respond to your enquiry. Do not send health data or sensitive medical information.",
-    contactMailFallback:"You can also email",
+    formSending:"Sending…",
+    formSuccess:"Your message has been sent. Thank you.",
+    formError:"The message could not be sent. Please try again later or email contact@kalyfn.com.",
+    contactMailFallback:"",
     footerLegal:"Legal notice",
     footerPrivacy:"Privacy policy",
     formEmailSubject:"Enquiry from the KALY website",
@@ -264,7 +273,7 @@ const translations = {
     privacyPurposeHeading:"Purpose and legal basis",
     privacyPurposeText:"This information is used only to receive, review and respond to your enquiry. The processing is based on the legitimate interest in responding to enquiries sent to the KALY project.",
     privacyFormHeading:"How the form works",
-    privacyFormText:"The form does not send data directly to a KALY server. When you click “Prepare message”, your email application opens with a pre-filled email addressed to contact@kalyfn.com. You can review, edit or cancel it. If you send it, the email services used to transmit and receive it will process the message.",
+    privacyFormText:"The form sends the information to a server-side function hosted on Cloudflare Pages. This function uses the Resend API to deliver the message to contact@kalyfn.com. The API key is stored server-side and is not exposed in the browser. Do not send health data or sensitive medical information.",
     privacyRecipientsHeading:"Recipients",
     privacyRecipientsText:"Sent messages are accessible to the people managing enquiries received at contact@kalyfn.com and to the email providers needed to send and receive them. The website host may process technical connection and security data to provide the service.",
     privacyRetentionHeading:"Retention period",
@@ -347,86 +356,67 @@ const yearNode = document.getElementById("year");
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 
 const contactForm = document.getElementById("contact-form");
-
 if (contactForm) {
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const data = new FormData(contactForm);
-    const button = contactForm.querySelector('[type="submit"]');
-    const status = document.getElementById("contact-status");
     const lang = document.documentElement.lang || "fr";
+    const dictionary = translations[lang] || translations.fr;
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const status = document.getElementById("contact-status");
+    const formData = new FormData(contactForm);
 
-    const messages = {
-      fr: {
-        sending: "Envoi en cours...",
-        success: "Votre message a bien été envoyé.",
-        error: "L'envoi a échoué. Veuillez réessayer."
-      },
-      es: {
-        sending: "Enviando...",
-        success: "Tu mensaje se ha enviado correctamente.",
-        error: "No se pudo enviar el mensaje. Inténtalo de nuevo."
-      },
-      en: {
-        sending: "Sending...",
-        success: "Your message has been sent.",
-        error: "The message could not be sent. Please try again."
-      }
-    };
-
-    const text = messages[lang] || messages.fr;
-    const originalLabel = button ? button.textContent : "";
-
-    if (button) {
-      button.disabled = true;
-      button.textContent = text.sending;
+    // Ignore automated submissions caught by the hidden honeypot field.
+    if (formData.get("website")) {
+      contactForm.reset();
+      if (status) status.textContent = dictionary.formSuccess;
+      return;
     }
 
+    const payload = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      subject: String(formData.get("subject") || "").trim(),
+      message: String(formData.get("message") || "").trim(),
+      website: String(formData.get("website") || "")
+    };
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = dictionary.formSending;
+    }
     if (status) {
-      status.textContent = "";
+      status.textContent = dictionary.formSending;
+      status.className = "contact-status is-pending";
     }
 
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: data.get("name"),
-          email: data.get("email"),
-          subject: data.get("subject"),
-          message: data.get("message"),
-          website: data.get("website") || ""
-        })
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
       });
-
-      const result = await response.json();
+      const result = await response.json().catch(() => ({}));
 
       if (!response.ok || !result.success) {
-        throw new Error("Email sending failed");
+        throw new Error(result.error || "Contact form request failed");
       }
 
       contactForm.reset();
-
       if (status) {
-        status.textContent = text.success;
-      } else {
-        alert(text.success);
+        status.textContent = dictionary.formSuccess;
+        status.className = "contact-status is-success";
       }
-
     } catch (error) {
+      console.error("KALY contact form:", error);
       if (status) {
-        status.textContent = text.error;
-      } else {
-        alert(text.error);
+        status.textContent = dictionary.formError;
+        status.className = "contact-status is-error";
       }
-
     } finally {
-      if (button) {
-        button.disabled = false;
-        button.textContent = originalLabel;
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = dictionary.contactSend;
       }
     }
   });
