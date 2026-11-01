@@ -47,7 +47,7 @@ const translations = {
     contactEmail:"Adresse e-mail",
     contactSubject:"Objet",
     contactMessage:"Message",
-    contactSend:"Préparer le message",
+    contactSend:"Envoyer",
     contactPrivacy:"Les informations saisies servent uniquement à répondre à votre demande. N’envoyez pas de données de santé ou d’informations médicales sensibles.",
     contactMailFallback:"Vous pouvez également écrire à",
     footerLegal:"Mentions légales",
