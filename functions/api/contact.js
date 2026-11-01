@@ -1,87 +1,57 @@
+const RESEND_ENDPOINT = "https://api.resend.com/emails";
+const DESTINATION = "contact@kalyfn.com";
+
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store"
+    }
+  });
+}
+
+function clean(value, maxLength) {
+  return String(value || "").trim().slice(0, maxLength);
+}
 
 export async function onRequestPost({ request, env }) {
-  const headers = {
-    "Content-Type": "application/json",
-    "Cache-Control": "no-store"
-  };
-
-  const json = (status, body) =>
-    new Response(JSON.stringify(body), { status, headers });
-
-  if (request.method !== "POST") {
-    return json(405, {
-      success: false,
-      error: "Method not allowed"
-    });
-  }
-
   const origin = request.headers.get("Origin");
-  const requestUrl = new URL(request.url);
+  const requestOrigin = new URL(request.url).origin;
 
-  if (origin) {
-    try {
-      if (new URL(origin).host !== requestUrl.host) {
-        return json(403, {
-          success: false,
-          error: "Invalid origin"
-        });
-      }
-    } catch {
-      return json(403, {
-        success: false,
-        error: "Invalid origin"
-      });
-    }
+  if (origin && origin !== requestOrigin) {
+    return json({ success: false, error: "Invalid origin" }, 403);
   }
 
   let data;
-
   try {
     data = await request.json();
   } catch {
-    return json(400, {
-      success: false,
-      error: "Invalid JSON"
-    });
+    return json({ success: false, error: "Invalid JSON" }, 400);
   }
 
-  // Champ anti-spam invisible (honeypot)
-  if (typeof data.website === "string" && data.website.trim()) {
-    return json(200, { success: true });
+  // Honeypot: silently accept automated submissions without sending an email.
+  if (clean(data.website, 200)) {
+    return json({ success: true });
   }
 
-  const name = String(data.name || "").trim();
-  const email = String(data.email || "").trim();
-  const subject = String(data.subject || "").trim();
-  const message = String(data.message || "").trim();
+  const name = clean(data.name, 100);
+  const email = clean(data.email, 254);
+  const subject = clean(data.subject, 160).replace(/[\r\n]+/g, " ");
+  const message = clean(data.message, 5000);
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (
-    !name ||
-    name.length > 120 ||
-    !emailPattern.test(email) ||
-    email.length > 254 ||
-    !subject ||
-    subject.length > 180 ||
-    !message ||
-    message.length > 5000
-  ) {
-    return json(400, {
-      success: false,
-      error: "Invalid form fields"
-    });
+  if (!name || !emailPattern.test(email) || !subject || !message) {
+    return json({ success: false, error: "Missing or invalid fields" }, 400);
   }
 
   if (!env.RESEND_API_KEY) {
-    return json(500, {
-      success: false,
-      error: "Email service is not configured"
-    });
+    return json({ success: false, error: "Email service is not configured" }, 500);
   }
 
-  const emailText = [
-    "Nouveau message depuis le formulaire KALY",
+  const from = env.RESEND_FROM || "KALY <contact@kalyfn.com>";
+  const text = [
+    "Nouveau message depuis le site KALY",
     "",
     `Nom : ${name}`,
     `E-mail : ${email}`,
@@ -92,36 +62,30 @@ export async function onRequestPost({ request, env }) {
   ].join("\n");
 
   let resendResponse;
-
   try {
-    resendResponse = await fetch("https://api.resend.com/emails", {
+    resendResponse = await fetch(RESEND_ENDPOINT, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${env.RESEND_API_KEY}`,
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        from: env.RESEND_FROM || "KALY <contact@kalyfn.com>",
-        to: ["contact@kalyfn.com"],
+        from,
+        to: [DESTINATION],
         reply_to: email,
         subject: `[KALY contact] ${subject}`,
-        text: emailText
+        text
       })
     });
   } catch {
-    return json(502, {
-      success: false,
-      error: "Email provider unavailable"
-    });
+    return json({ success: false, error: "Email provider unavailable" }, 502);
   }
 
   if (!resendResponse.ok) {
-    return json(502, {
-      success: false,
-      error: "Email provider rejected the message"
-    });
+    const providerError = await resendResponse.text();
+    console.error("Resend API error:", resendResponse.status, providerError);
+    return json({ success: false, error: "Email delivery failed" }, 502);
   }
 
-  return json(200, { success: true });
+  return json({ success: true });
 }
-
