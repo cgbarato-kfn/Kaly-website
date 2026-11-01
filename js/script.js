@@ -239,7 +239,7 @@ const translations = {
     contactEmail:"Email address",
     contactSubject:"Subject",
     contactMessage:"Message",
-    contactSend:"Prepare message",
+    contactSend:"Send",
     contactPrivacy:"The information you enter is used only to respond to your enquiry. Do not send health data or sensitive medical information.",
     contactMailFallback:"You can also email",
     footerLegal:"Legal notice",
