@@ -347,20 +347,88 @@ const yearNode = document.getElementById("year");
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 
 const contactForm = document.getElementById("contact-form");
+
 if (contactForm) {
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
     const data = new FormData(contactForm);
-    const subject = data.get("subject") || translations[document.documentElement.lang].formEmailSubject;
-    const body = [
-      "Nom : " + data.get("name"),
-      "E-mail : " + data.get("email"),
-      "",
-      "Message :",
-      data.get("message")
-    ].join("\\n");
-    const mailto = "mailto:contact@kalyfn.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    window.location.href = mailto;
+    const button = contactForm.querySelector('[type="submit"]');
+    const status = document.getElementById("contact-status");
+    const lang = document.documentElement.lang || "fr";
+
+    const messages = {
+      fr: {
+        sending: "Envoi en cours...",
+        success: "Votre message a bien été envoyé.",
+        error: "L'envoi a échoué. Veuillez réessayer."
+      },
+      es: {
+        sending: "Enviando...",
+        success: "Tu mensaje se ha enviado correctamente.",
+        error: "No se pudo enviar el mensaje. Inténtalo de nuevo."
+      },
+      en: {
+        sending: "Sending...",
+        success: "Your message has been sent.",
+        error: "The message could not be sent. Please try again."
+      }
+    };
+
+    const text = messages[lang] || messages.fr;
+    const originalLabel = button ? button.textContent : "";
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = text.sending;
+    }
+
+    if (status) {
+      status.textContent = "";
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          subject: data.get("subject"),
+          message: data.get("message"),
+          website: data.get("website") || ""
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("Email sending failed");
+      }
+
+      contactForm.reset();
+
+      if (status) {
+        status.textContent = text.success;
+      } else {
+        alert(text.success);
+      }
+
+    } catch (error) {
+      if (status) {
+        status.textContent = text.error;
+      } else {
+        alert(text.error);
+      }
+
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalLabel;
+      }
+    }
   });
 }
 setLanguage(document.documentElement.lang || "fr");
