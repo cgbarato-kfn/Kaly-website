@@ -1,6 +1,6 @@
 const translations = {
   fr: {
-    skip:"Aller au contenu", navAbout:"KALY", navAudience:"Pour qui ?", navHow:"Comment ça fonctionne", navFeatures:"Pour les professionnels de santé", navApproach:"Ce que KALY ne fait pas",
+    skip:"Aller au contenu", navAbout:"Le Food Noise", navAudience:"KALY", navHow:"Fonctionnement", navFeatures:"Professionnels", navApproach:"Ce que KALY ne fait pas",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
     heroTitle:"Ne pas seulement suivre ce que l’on mange. Comprendre ce qui se passe autour de la nourriture.",
     heroLead:"KALY est une application de suivi du Food Noise et des comportements alimentaires qui lui sont associés.",
@@ -99,7 +99,7 @@ const translations = {
     footerLine:"Food Noise & Metabolic Tracking"
   },
   es: {
-    skip:"Ir al contenido", navAbout:"KALY", navAudience:"¿Para quién?", navHow:"Cómo funciona", navFeatures:"Para profesionales de salud", navApproach:"Lo que KALY no hace",
+    skip:"Ir al contenido", navAbout:"Food Noise", navAudience:"KALY", navHow:"Funcionamiento", navFeatures:"Profesionales", navApproach:"Lo que KALY no hace",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
     heroTitle:"No se trata solo de registrar lo que comemos. Se trata de comprender qué ocurre alrededor de la comida.",
     heroLead:"KALY es una aplicación para hacer un seguimiento del Food Noise y de los comportamientos alimentarios relacionados.",
@@ -198,7 +198,7 @@ const translations = {
     footerLine:"Food Noise & Metabolic Tracking"
   },
   en: {
-    skip:"Skip to content", navAbout:"KALY", navAudience:"Who is it for?", navHow:"How it works", navFeatures:"For healthcare professionals", navApproach:"What KALY does not do",
+    skip:"Skip to content", navAbout:"Food Noise", navAudience:"KALY", navHow:"How it works", navFeatures:"Professionals", navApproach:"What KALY does not do",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
     heroTitle:"Not just tracking what we eat. Understanding what happens around food.",
     heroLead:"KALY is an app for tracking Food Noise and related eating behaviours.",
