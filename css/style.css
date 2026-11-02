@@ -315,7 +315,6 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
 
 /* V10 — direct contact form submission */
 .form-honeypot {
-  display: none !important;
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
@@ -340,3 +339,60 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
 .contact-status.is-pending { color: var(--muted); }
 .contact-status.is-success { color: #386B4B; }
 .contact-status.is-error { color: #A13D36; }
+
+/* V11 — ajustements pour la nouvelle structure de la page */
+html { scroll-padding-top: 100px; }
+section[id], .professional-main[id] { scroll-margin-top: 100px; }
+
+.section-about { background: var(--off-white); }
+.food-noise-section { background: var(--white); }
+.spaces-section { background: var(--off-white); }
+.audience-section { background: var(--white); }
+.boundaries-section { background: var(--kaly-mint); }
+
+.boundaries-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+.boundaries-panel h2 { max-width: 520px; }
+.bound-list li { line-height: 1.6; }
+
+.professional-main {
+  scroll-margin-top: 100px;
+}
+.professional-benefit { min-width: 0; }
+.professional-benefit > div:last-child { min-width: 0; }
+
+.contact-section { background: var(--kaly-cream); }
+.contact-form { min-width: 0; }
+.contact-form input,
+.contact-form textarea { min-width: 0; }
+.form-status {
+  min-height: 1.5em;
+  margin: 2px 0 0;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+.form-status:empty { display: none; }
+.form-status.is-pending { color: var(--muted); }
+.form-status.is-success { color: #386B4B; }
+.form-status.is-error { color: #A13D36; }
+
+@media (max-width: 760px) {
+  html { scroll-padding-top: 82px; }
+  section[id], .professional-main[id] { scroll-margin-top: 82px; }
+  .section { padding: 68px 0; }
+  .food-noise-section,
+  .section-about,
+  .spaces-section,
+  .audience-section,
+  .boundaries-section,
+  .contact-section { padding-top: 64px; padding-bottom: 64px; }
+  .boundaries-panel {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 25px 22px;
+  }
+  .professional-main { margin: 34px 0 8px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+}
