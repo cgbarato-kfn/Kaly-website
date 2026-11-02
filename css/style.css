@@ -535,3 +535,63 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
   .mobile-content-details > summary { display: none; }
   .mobile-content-details > .mobile-content-details-inner { display: block !important; }
 }
+
+
+/* V16 — Ajustements mobiles sans masquer les textes ni modifier le bureau */
+@media (max-width: 760px) {
+  .section { padding: 48px 0; }
+  .eyebrow { margin-bottom: 10px; font-size: .68rem; letter-spacing: .13em; }
+  h2 { font-size: clamp(1.8rem, 8vw, 2.35rem); }
+  .section-heading { margin-bottom: 24px; }
+  .section-heading > p:last-child { margin-top: 12px; }
+  .hero { padding: 38px 0 18px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); line-height: 1.1; }
+  .hero-lead { margin: 16px 0 18px; }
+  .hero-positioning { margin-top: 14px; padding: 12px 14px; }
+  .hero-visual { min-height: 230px; }
+  .hero-mascot { width: clamp(190px, 62vw, 250px); max-height: 245px; }
+  .hero-bottom { padding-top: 18px; font-size: .78rem; }
+  .two-column { gap: 14px; }
+  .food-noise-content .large-text, .about-content .large-text { margin-bottom: 12px; }
+  .about-group { margin-bottom: 16px; }
+  .about-content > p:last-child { margin-top: 16px; }
+  #features .section-heading { margin-bottom: 18px; }
+  #features .features-layout { gap: 18px; margin-top: 18px; }
+  #features .feature-card { padding: 19px; border-radius: 20px; }
+  #features .feature-top { margin-bottom: 16px; }
+  #features .feature-card h3 { font-size: 1.18rem; margin-bottom: 8px; }
+  #features .feature-card p { font-size: .9rem; line-height: 1.55; }
+  #features .feature-details { margin-top: 8px; }
+  #features .feature-details > summary { display: inline-flex; margin-top: 8px; padding: 7px 12px; border: 1px solid rgba(110,132,116,.35); border-radius: 999px; background: rgba(255,255,255,.72); color: #293D4C; font-size: .82rem; font-weight: 700; cursor: pointer; }
+  #features .feature-details-content { display: block; }
+  #features .features-visual img { max-height: 340px; width: 100%; object-fit: contain; }
+  .audience-grid { grid-template-columns: 1fr; gap: 11px; }
+  .audience-card { min-height: 0; padding: 18px; border-radius: 18px; }
+  .audience-card .card-index { margin-bottom: 12px; }
+  .audience-card h3 { margin-bottom: 8px; font-size: 1.08rem; }
+  .audience-card p { font-size: .9rem; line-height: 1.55; }
+  .professional-main { margin: 24px 0 8px; padding: 22px 18px; border-radius: 20px; }
+  .professional-main-heading { margin-bottom: 18px; }
+  .professional-main-heading h2 { font-size: 1.65rem; }
+  .professional-main-intro { font-size: .98rem; line-height: 1.55; }
+  .professional-benefits { grid-template-columns: 1fr; gap: 11px; margin: 18px 0; }
+  .professional-benefit { padding: 17px; border-radius: 15px; gap: 13px; }
+  .professional-benefit-number { flex-basis: 36px; width: 36px; height: 36px; }
+  .professional-benefit h3 { font-size: 1.05rem; }
+  .professional-benefit p, .professional-benefit li { font-size: .88rem; line-height: 1.55; }
+  .professional-main-context { margin-top: 18px; font-size: .9rem; }
+  .professional-main-limit { margin-top: 14px; padding-top: 12px; font-size: .82rem; }
+  .boundaries-panel { grid-template-columns: 1fr; gap: 18px; padding: 22px 18px; border-radius: 20px; }
+  .boundaries-panel .large-text { font-size: 1.12rem; }
+  .bound-list { gap: 10px; }
+  .bound-list li { padding-left: 24px; font-size: .9rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
+  .contact-copy h2 { font-size: 1.85rem; }
+  .contact-mail { margin-top: 14px; }
+  .contact-form { gap: 7px; padding: 19px 16px; border-radius: 18px; }
+  .contact-form input, .contact-form textarea { padding: 11px 12px; }
+  .contact-form textarea { min-height: 110px; }
+  .form-privacy { font-size: .78rem; }
+  .site-footer { padding: 24px 0; }
+  .footer-inner { gap: 12px; }
+}
