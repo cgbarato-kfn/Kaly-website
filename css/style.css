@@ -313,86 +313,52 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
 @media(max-width:760px){.professional-benefits{grid-template-columns:1fr}.professional-main{margin-top:36px;padding:25px 20px}.professional-benefit{padding:20px;gap:13px}}
 
 
-/* V10 — direct contact form submission */
-.form-honeypot {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
+/* V12 — Trois espaces à gauche, aperçu de l’application à droite */
+.spaces-section .features-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 48px);
+  margin-top: 30px;
 }
-.contact-submit:disabled {
-  opacity: .65;
-  cursor: wait;
+.spaces-section .features-layout .feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 0;
 }
-.contact-status {
-  min-height: 1.5em;
-  margin: 2px 0 0;
-  font-size: .9rem;
-  line-height: 1.5;
+.spaces-section .features-layout .feature-card {
+  min-height: 0;
+  padding: clamp(20px, 2.4vw, 28px);
 }
-.contact-status:empty { display: none; }
-.contact-status.is-pending { color: var(--muted); }
-.contact-status.is-success { color: #386B4B; }
-.contact-status.is-error { color: #A13D36; }
-
-/* V11 — ajustements pour la nouvelle structure de la page */
-html { scroll-padding-top: 100px; }
-section[id], .professional-main[id] { scroll-margin-top: 100px; }
-
-.section-about { background: var(--off-white); }
-.food-noise-section { background: var(--white); }
-.spaces-section { background: var(--off-white); }
-.audience-section { background: var(--white); }
-.boundaries-section { background: var(--kaly-mint); }
-
-.boundaries-panel {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
+.spaces-section .features-layout .feature-top {
+  margin-bottom: 24px;
 }
-.boundaries-panel h2 { max-width: 520px; }
-.bound-list li { line-height: 1.6; }
-
-.professional-main {
-  scroll-margin-top: 100px;
+.spaces-section .features-layout .feature-card ul {
+  margin-top: 14px;
 }
-.professional-benefit { min-width: 0; }
-.professional-benefit > div:last-child { min-width: 0; }
-
-.contact-section { background: var(--kaly-cream); }
-.contact-form { min-width: 0; }
-.contact-form input,
-.contact-form textarea { min-width: 0; }
-.form-status {
-  min-height: 1.5em;
-  margin: 2px 0 0;
-  font-size: .9rem;
-  line-height: 1.5;
+.features-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
 }
-.form-status:empty { display: none; }
-.form-status.is-pending { color: var(--muted); }
-.form-status.is-success { color: #386B4B; }
-.form-status.is-error { color: #A13D36; }
-
+.features-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
 @media (max-width: 760px) {
-  html { scroll-padding-top: 82px; }
-  section[id], .professional-main[id] { scroll-margin-top: 82px; }
-  .section { padding: 68px 0; }
-  .food-noise-section,
-  .section-about,
-  .spaces-section,
-  .audience-section,
-  .boundaries-section,
-  .contact-section { padding-top: 64px; padding-bottom: 64px; }
-  .boundaries-panel {
+  .spaces-section .features-layout {
     grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 25px 22px;
+    gap: 24px;
   }
-  .professional-main { margin: 34px 0 8px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 24px; }
+  .spaces-section .features-layout .feature-card {
+    padding: 23px;
+  }
+  .features-visual img {
+    width: 100%;
+  }
 }
