@@ -595,3 +595,79 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
   .site-footer { padding: 24px 0; }
   .footer-inner { gap: 12px; }
 }
+
+
+/* V17 — disclosures accessibles sur ordinateur, tablette et mobile */
+.site-details {
+  display: block;
+  margin-top: 12px;
+}
+.site-details > summary,
+.feature-details > summary {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  min-height: 34px;
+  padding: 7px 13px;
+  border: 1px solid rgba(110,132,116,.42);
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  color: #293D4C;
+  font: inherit;
+  font-size: .84rem;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  list-style: none;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.site-details > summary::-webkit-details-marker,
+.feature-details > summary::-webkit-details-marker {
+  display: none;
+}
+.site-details > summary::after,
+.feature-details > summary::after {
+  content: "+";
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.site-details[open] > summary::after,
+.feature-details[open] > summary::after {
+  content: "−";
+}
+.site-details-content {
+  display: block;
+  padding-top: 10px;
+}
+.site-details-content p {
+  margin: 0 0 10px;
+}
+.audience-details { margin-top: 12px; }
+.audience-details .site-details-content p { margin: 0; }
+.professional-benefit .site-details { margin-top: 10px; }
+.professional-benefit .site-details-content ul { margin-top: 10px; }
+
+/* Le champ honeypot reste présent pour la protection anti-spam, mais invisible */
+.form-honeypot {
+  display: none !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+}
+
+
+/* V17.1 — Navigation compacte lorsque le menu complet ne tient plus */
+@media (max-width: 1240px) and (min-width: 761px) {
+  .header-inner { gap: 16px; }
+  .brand-logo { width: 100px; }
+  .desktop-nav { display: none; }
+  .menu-toggle { display: block; }
+  .mobile-nav { padding: 0 24px 18px; gap: 14px; flex-direction: column; }
+  .mobile-nav:not([hidden]) { display: flex; }
+}
