@@ -1,6 +1,7 @@
 const translations = {
   fr: {
-    skip:"Aller au contenu", navAbout:"Le Food Noise", navAudience:"KALY", navHow:"Fonctionnement", navFeatures:"Professionnels", navApproach:"Ce que KALY ne fait pas",
+    moreInfo:"En savoir plus",
+    skip:"Aller au contenu", navAbout:"KALY", navAudience:"Pour qui ?", navHow:"Comment ça fonctionne", navFeatures:"Pour les professionnels de santé", navApproach:"Ce que KALY ne fait pas",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
     heroTitle:"Ne pas seulement suivre ce que l’on mange. Comprendre ce qui se passe autour de la nourriture.",
     heroLead:"KALY est une application de suivi du Food Noise et des comportements alimentaires qui lui sont associés.",
@@ -8,14 +9,14 @@ const translations = {
     aboutEyebrow:"LE PROJET", aboutTitle:"Qu’est-ce que KALY ?",
     aboutLead:"KALY est une application qui permet de suivre le Food Noise et de mieux comprendre les comportements alimentaires associés.",
     aboutRecordIntro:"Elle aide à enregistrer les épisodes de Food Noise (bruit alimentaire), notamment :",
-    aboutRecord1:"leur fréquence et leur intensité",
-    aboutRecord2:"les sensations ressenties",
-    aboutRecord3:"les émotions et les pensées associées",
+    aboutRecord1:"leur fréquence et leur intensité ;",
+    aboutRecord2:"les sensations ressenties ;",
+    aboutRecord3:"les émotions et les pensées associées ;",
     aboutRecord4:"les actions qui suivent et les résultats obtenus.",
     aboutContextIntro:"Ces observations peuvent être mises en perspective avec d’autres informations renseignées par l’utilisateur :",
-    aboutContext1:"la faim",
-    aboutContext2:"le sommeil",
-    aboutContext3:"les données métaboliques",
+    aboutContext1:"la faim ;",
+    aboutContext2:"le sommeil ;",
+    aboutContext3:"les données métaboliques ;",
     aboutContext4:"les traitements médicaux.",
     aboutProfessional:"Les informations recueillies peuvent faciliter le suivi personnel et favoriser le dialogue avec les professionnels de santé — médecins, psychologues et nutritionnistes — en apportant des éléments concrets pour préparer les consultations et accompagner le suivi.",
     foodNoiseEyebrow:"DÉFINITION",
@@ -47,12 +48,9 @@ const translations = {
     contactEmail:"Adresse e-mail",
     contactSubject:"Objet",
     contactMessage:"Message",
-    contactSend:"Envoyer",
+    contactSend:"Préparer le message",
     contactPrivacy:"Les informations saisies servent uniquement à répondre à votre demande. N’envoyez pas de données de santé ou d’informations médicales sensibles.",
-    formSending:"Envoi en cours…",
-    formSuccess:"Votre message a été envoyé. Merci.",
-    formError:"L’envoi a échoué. Réessayez plus tard ou écrivez à contact@kalyfn.com.",
-    contactMailFallback:"",
+    contactMailFallback:"Vous pouvez également écrire à",
     footerLegal:"Mentions légales",
     footerPrivacy:"Politique de confidentialité",
     formEmailSubject:"Demande depuis le site KALY",
@@ -75,7 +73,7 @@ const translations = {
     privacyPurposeHeading:"Finalité et base juridique",
     privacyPurposeText:"Ces informations sont utilisées uniquement pour recevoir, examiner et traiter votre demande, puis vous répondre. Le traitement repose sur l’intérêt légitime à répondre aux sollicitations adressées au projet KALY.",
     privacyFormHeading:"Fonctionnement du formulaire",
-    privacyFormText:"Le formulaire transmet les informations saisies à une fonction serveur hébergée sur Cloudflare Pages. Cette fonction utilise l’API Resend pour envoyer le message à contact@kalyfn.com. La clé API est conservée côté serveur et n’est pas exposée dans le navigateur. N’envoyez pas de données de santé ou d’informations médicales sensibles.",
+    privacyFormText:"Le formulaire de ce site ne transmet pas directement les données à un serveur KALY. Lorsque vous cliquez sur « Préparer le message », votre application de messagerie s’ouvre avec un e-mail prérempli à destination de contact@kalyfn.com. Vous gardez la possibilité de vérifier, modifier ou annuler l’envoi. Si vous envoyez le message, celui-ci est traité par les services de messagerie utilisés pour son acheminement et sa réception.",
     privacyRecipientsHeading:"Destinataires",
     privacyRecipientsText:"Les messages envoyés sont accessibles aux personnes chargées de gérer les demandes reçues à l’adresse contact@kalyfn.com ainsi qu’aux prestataires techniques de messagerie nécessaires à leur acheminement. L’hébergeur du site peut traiter des données techniques de connexion et de sécurité dans le cadre de la fourniture du service.",
     privacyRetentionHeading:"Durée de conservation",
@@ -99,7 +97,8 @@ const translations = {
     footerLine:"Food Noise & Metabolic Tracking"
   },
   es: {
-    skip:"Ir al contenido", navAbout:"Food Noise", navAudience:"KALY", navHow:"Funcionamiento", navFeatures:"Profesionales", navApproach:"Lo que KALY no hace",
+    moreInfo:"Ver más",
+    skip:"Ir al contenido", navAbout:"KALY", navAudience:"¿Para quién?", navHow:"Cómo funciona", navFeatures:"Para profesionales de salud", navApproach:"Lo que KALY no hace",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
     heroTitle:"No se trata solo de registrar lo que comemos. Se trata de comprender qué ocurre alrededor de la comida.",
     heroLead:"KALY es una aplicación para hacer un seguimiento del Food Noise y de los comportamientos alimentarios relacionados.",
@@ -107,14 +106,14 @@ const translations = {
     aboutEyebrow:"EL PROYECTO", aboutTitle:"¿Qué es KALY?",
     aboutLead:"KALY es una aplicación que permite hacer un seguimiento del Food Noise y comprender mejor los comportamientos alimentarios asociados.",
     aboutRecordIntro:"Ayuda a registrar los episodios de Food Noise (ruido alimentario), incluyendo:",
-    aboutRecord1:"su frecuencia e intensidad",
-    aboutRecord2:"las sensaciones",
-    aboutRecord3:"las emociones y los pensamientos asociados",
+    aboutRecord1:"su frecuencia e intensidad;",
+    aboutRecord2:"las sensaciones;",
+    aboutRecord3:"las emociones y los pensamientos asociados;",
     aboutRecord4:"las acciones posteriores y los resultados obtenidos.",
     aboutContextIntro:"Estos registros pueden ponerse en contexto con otros datos proporcionados por el usuario:",
-    aboutContext1:"el hambre",
-    aboutContext2:"el sueño",
-    aboutContext3:"los datos metabólicos",
+    aboutContext1:"el hambre;",
+    aboutContext2:"el sueño;",
+    aboutContext3:"los datos metabólicos;",
     aboutContext4:"los tratamientos médicos.",
     aboutProfessional:"La información recopilada puede facilitar el seguimiento personal y favorecer el diálogo con los profesionales de salud —médicos, psicólogos y nutricionistas— al aportar elementos concretos para preparar las consultas y acompañar el seguimiento.",
     foodNoiseEyebrow:"DEFINICIÓN",
@@ -146,12 +145,9 @@ const translations = {
     contactEmail:"Correo electrónico",
     contactSubject:"Asunto",
     contactMessage:"Mensaje",
-    contactSend:"Enviar",
+    contactSend:"Preparar mensaje",
     contactPrivacy:"La información ingresada se utiliza únicamente para responder tu consulta. No envíes datos de salud ni información médica sensible.",
-    formSending:"Enviando…",
-    formSuccess:"Tu mensaje se ha enviado. Gracias.",
-    formError:"No se pudo enviar el mensaje. Inténtalo más tarde o escribe a contact@kalyfn.com.",
-    contactMailFallback:"",
+    contactMailFallback:"También puedes escribir a",
     footerLegal:"Aviso legal",
     footerPrivacy:"Política de privacidad",
     formEmailSubject:"Consulta desde el sitio web de KALY",
@@ -174,7 +170,7 @@ const translations = {
     privacyPurposeHeading:"Finalidad y base jurídica",
     privacyPurposeText:"Esta información se utiliza únicamente para recibir, revisar y responder tu consulta. El tratamiento se basa en el interés legítimo de responder a las solicitudes dirigidas al proyecto KALY.",
     privacyFormHeading:"Funcionamiento del formulario",
-    privacyFormText:"El formulario transmite la información a una función del servidor alojada en Cloudflare Pages. Esta función utiliza la API de Resend para enviar el mensaje a contact@kalyfn.com. La clave API se guarda en el servidor y no se expone en el navegador. No envíes datos de salud ni información médica sensible.",
+    privacyFormText:"El formulario no envía directamente los datos a un servidor de KALY. Al hacer clic en «Preparar mensaje», se abre tu aplicación de correo con un mensaje precompletado dirigido a contact@kalyfn.com. Puedes revisarlo, modificarlo o cancelar el envío. Si lo envías, los servicios de correo utilizados para transmitirlo y recibirlo tratarán el mensaje.",
     privacyRecipientsHeading:"Destinatarios",
     privacyRecipientsText:"Los mensajes enviados son accesibles para las personas encargadas de gestionar las consultas recibidas en contact@kalyfn.com y para los proveedores de correo necesarios para su envío y recepción. El proveedor de alojamiento puede tratar datos técnicos de conexión y seguridad para prestar el servicio.",
     privacyRetentionHeading:"Plazo de conservación",
@@ -198,7 +194,8 @@ const translations = {
     footerLine:"Food Noise & Metabolic Tracking"
   },
   en: {
-    skip:"Skip to content", navAbout:"Food Noise", navAudience:"KALY", navHow:"How it works", navFeatures:"Professionals", navApproach:"What KALY does not do",
+    moreInfo:"Learn more",
+    skip:"Skip to content", navAbout:"KALY", navAudience:"Who is it for?", navHow:"How it works", navFeatures:"For healthcare professionals", navApproach:"What KALY does not do",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
     heroTitle:"Not just tracking what we eat. Understanding what happens around food.",
     heroLead:"KALY is an app for tracking Food Noise and related eating behaviours.",
@@ -206,14 +203,14 @@ const translations = {
     aboutEyebrow:"THE PROJECT", aboutTitle:"What is KALY?",
     aboutLead:"KALY is an app that helps users track Food Noise and better understand the eating behaviours associated with it.",
     aboutRecordIntro:"It helps users record Food Noise episodes, including:",
-    aboutRecord1:"their frequency and intensity",
-    aboutRecord2:"sensations",
-    aboutRecord3:"associated emotions and thoughts",
+    aboutRecord1:"their frequency and intensity;",
+    aboutRecord2:"sensations;",
+    aboutRecord3:"associated emotions and thoughts;",
     aboutRecord4:"subsequent actions and outcomes.",
     aboutContextIntro:"These observations can be considered alongside other information entered by the user:",
-    aboutContext1:"hunger",
-    aboutContext2:"sleep",
-    aboutContext3:"metabolic data",
+    aboutContext1:"hunger;",
+    aboutContext2:"sleep;",
+    aboutContext3:"metabolic data;",
     aboutContext4:"medical treatments.",
     aboutProfessional:"The information collected can support personal tracking and conversations with healthcare professionals — doctors, psychologists and dietitians — by providing concrete details to prepare for consultations and support ongoing follow-up.",
     foodNoiseEyebrow:"DEFINITION",
@@ -245,12 +242,9 @@ const translations = {
     contactEmail:"Email address",
     contactSubject:"Subject",
     contactMessage:"Message",
-    contactSend:"Send",
+    contactSend:"Prepare message",
     contactPrivacy:"The information you enter is used only to respond to your enquiry. Do not send health data or sensitive medical information.",
-    formSending:"Sending…",
-    formSuccess:"Your message has been sent. Thank you.",
-    formError:"The message could not be sent. Please try again later or email contact@kalyfn.com.",
-    contactMailFallback:"",
+    contactMailFallback:"You can also email",
     footerLegal:"Legal notice",
     footerPrivacy:"Privacy policy",
     formEmailSubject:"Enquiry from the KALY website",
@@ -273,7 +267,7 @@ const translations = {
     privacyPurposeHeading:"Purpose and legal basis",
     privacyPurposeText:"This information is used only to receive, review and respond to your enquiry. The processing is based on the legitimate interest in responding to enquiries sent to the KALY project.",
     privacyFormHeading:"How the form works",
-    privacyFormText:"The form sends the information to a server-side function hosted on Cloudflare Pages. This function uses the Resend API to deliver the message to contact@kalyfn.com. The API key is stored server-side and is not exposed in the browser. Do not send health data or sensitive medical information.",
+    privacyFormText:"The form does not send data directly to a KALY server. When you click “Prepare message”, your email application opens with a pre-filled email addressed to contact@kalyfn.com. You can review, edit or cancel it. If you send it, the email services used to transmit and receive it will process the message.",
     privacyRecipientsHeading:"Recipients",
     privacyRecipientsText:"Sent messages are accessible to the people managing enquiries received at contact@kalyfn.com and to the email providers needed to send and receive them. The website host may process technical connection and security data to provide the service.",
     privacyRetentionHeading:"Retention period",
@@ -357,68 +351,19 @@ if (yearNode) yearNode.textContent = new Date().getFullYear();
 
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
-  contactForm.addEventListener("submit", async (event) => {
+  contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
-
-    const lang = document.documentElement.lang || "fr";
-    const dictionary = translations[lang] || translations.fr;
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const status = document.getElementById("contact-status");
-    const formData = new FormData(contactForm);
-
-    // Ignore automated submissions caught by the hidden honeypot field.
-    if (formData.get("website")) {
-      contactForm.reset();
-      if (status) status.textContent = dictionary.formSuccess;
-      return;
-    }
-
-    const payload = {
-      name: String(formData.get("name") || "").trim(),
-      email: String(formData.get("email") || "").trim(),
-      subject: String(formData.get("subject") || "").trim(),
-      message: String(formData.get("message") || "").trim(),
-      website: String(formData.get("website") || "")
-    };
-
-    if (submitButton) {
-      submitButton.disabled = true;
-      submitButton.textContent = dictionary.formSending;
-    }
-    if (status) {
-      status.textContent = dictionary.formSending;
-      status.className = "contact-status is-pending";
-    }
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json().catch(() => ({}));
-
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || "Contact form request failed");
-      }
-
-      contactForm.reset();
-      if (status) {
-        status.textContent = dictionary.formSuccess;
-        status.className = "contact-status is-success";
-      }
-    } catch (error) {
-      console.error("KALY contact form:", error);
-      if (status) {
-        status.textContent = dictionary.formError;
-        status.className = "contact-status is-error";
-      }
-    } finally {
-      if (submitButton) {
-        submitButton.disabled = false;
-        submitButton.textContent = dictionary.contactSend;
-      }
-    }
+    const data = new FormData(contactForm);
+    const subject = data.get("subject") || translations[document.documentElement.lang].formEmailSubject;
+    const body = [
+      "Nom : " + data.get("name"),
+      "E-mail : " + data.get("email"),
+      "",
+      "Message :",
+      data.get("message")
+    ].join("\\n");
+    const mailto = "mailto:contact@kalyfn.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    window.location.href = mailto;
   });
 }
 setLanguage(document.documentElement.lang || "fr");
