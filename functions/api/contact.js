@@ -15,6 +15,13 @@ function clean(value, maxLength) {
   return String(value || "").trim().slice(0, maxLength);
 }
 
+const requestTypes = {
+  general: "Question générale sur KALY",
+  professional: "Professionnel de santé ou partenariat",
+  participation: "Participation aux tests ou au développement",
+  other: "Autre demande"
+};
+
 export async function onRequestPost({ request, env }) {
   const origin = request.headers.get("Origin");
   const requestOrigin = new URL(request.url).origin;
@@ -30,19 +37,26 @@ export async function onRequestPost({ request, env }) {
     return json({ success: false, error: "Invalid JSON" }, 400);
   }
 
-  // Honeypot: silently accept automated submissions without sending an email.
-  if (clean(data.website, 200)) {
-    return json({ success: true });
-  }
+  if (clean(data.website, 200)) return json({ success: true });
 
+  const requestType = clean(data.requestType, 40);
   const name = clean(data.name, 100);
   const email = clean(data.email, 254);
+  const organization = clean(data.organization, 180);
+  const role = clean(data.function, 120);
+  const participation = clean(data.participation, 80);
   const subject = clean(data.subject, 160).replace(/[\r\n]+/g, " ");
   const message = clean(data.message, 5000);
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!name || !emailPattern.test(email) || !subject || !message) {
+  if (!requestTypes[requestType] || !name || !emailPattern.test(email) || !subject || !message) {
     return json({ success: false, error: "Missing or invalid fields" }, 400);
+  }
+  if (requestType === "professional" && !organization) {
+    return json({ success: false, error: "Missing organisation" }, 400);
+  }
+  if (requestType === "participation" && !participation) {
+    return json({ success: false, error: "Missing participation type" }, 400);
   }
 
   if (!env.RESEND_API_KEY) {
@@ -53,13 +67,17 @@ export async function onRequestPost({ request, env }) {
   const text = [
     "Nouveau message depuis le site KALY",
     "",
+    `Type de demande : ${requestTypes[requestType]}`,
     `Nom : ${name}`,
     `E-mail : ${email}`,
+    organization ? `Organisation : ${organization}` : "",
+    role ? `Fonction : ${role}` : "",
+    participation ? `Participation : ${participation}` : "",
     `Objet : ${subject}`,
     "",
     "Message :",
     message
-  ].join("\n");
+  ].filter(Boolean).join("\n");
 
   let resendResponse;
   try {
