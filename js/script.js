@@ -41,6 +41,10 @@ const translations = {
     approachNote:"L’objectif est de disposer d’informations plus structurées pour mieux décrire son expérience et, si on le souhaite, en discuter avec un professionnel de santé.",
     disclaimer:"KALY est présenté ici comme un projet d’application. Les informations et tendances affichées ont vocation à soutenir l’observation et le dialogue ; elles ne constituent ni un diagnostic ni une recommandation médicale et ne démontrent pas de lien de causalité.",
     legalBack:"Retour au site", navContact:"Contact",
+    trackerEyebrow:"LE PARCOURS TRACKER", trackerTitle:"Un épisode, six étapes courtes", trackerIntro:"L’utilisateur avance étape par étape. Les réponses sont courtes et décrivent le contexte, sans chercher à tout expliquer.",
+    step1Title:"Situation", step1Text:"Où êtes-vous et que se passe-t-il ?", step2Title:"Pensées et intensité", step2Text:"Quelles pensées sont présentes et quelle est leur intensité ?", step3Title:"Corps et faim", step3Text:"Quelles sensations remarquez-vous ? Avez-vous faim ?", step4Title:"Émotions et contexte", step4Text:"Quelle émotion ou quel élément de contexte est présent ?", step5Title:"Action et intention", step5Text:"Qu’avez-vous fait ou envisagé de faire ?", step6Title:"Résultat et ressenti", step6Text:"Que s’est-il passé ensuite et comment vous sentez-vous ?",
+    contactTypeLabel:"Quel est le motif de votre demande ?", contactTypePlaceholder:"Choisir un motif", contactTypeGeneral:"Question générale sur KALY", contactTypeProfessional:"Professionnel de santé ou partenariat", contactTypeParticipation:"Participer aux tests ou au développement", contactTypeOther:"Autre demande", contactOrganization:"Organisation ou établissement", contactFunction:"Votre fonction", contactParticipation:"Comment souhaitez-vous participer ?", participationChoose:"Choisir une option", participationTest:"Tester l’application", participationFeedback:"Donner un retour ou proposer des améliorations", participationContribute:"Contribuer au développement du projet",
+
     contactEyebrow:"CONTACT",
     contactTitle:"Une question sur KALY ?",
     contactIntro:"Pour toute question sur le projet ou le site, vous pouvez nous écrire à l’aide du formulaire.",
@@ -139,6 +143,10 @@ const translations = {
     approachNote:"El objetivo es disponer de información más estructurada para describir mejor la propia experiencia y, si se desea, comentarla con un profesional sanitario.",
     disclaimer:"KALY se presenta aquí como un proyecto de aplicación. La información y las tendencias mostradas pretenden apoyar la observación y el diálogo; no constituyen un diagnóstico ni una recomendación médica y no demuestran relaciones de causalidad.",
     legalBack:"Volver al sitio", navContact:"Contacto",
+    trackerEyebrow:"EL RECORRIDO DEL TRACKER", trackerTitle:"Un episodio, seis pasos breves", trackerIntro:"El usuario avanza paso a paso. Las respuestas son breves y describen el contexto, sin intentar explicarlo todo.",
+    step1Title:"Situación", step1Text:"¿Dónde estás y qué está pasando?", step2Title:"Pensamientos e intensidad", step2Text:"¿Qué pensamientos aparecen y qué intensidad tienen?", step3Title:"Cuerpo y hambre", step3Text:"¿Qué sensaciones notas? ¿Tienes hambre?", step4Title:"Emociones y contexto", step4Text:"¿Qué emoción o elemento del contexto está presente?", step5Title:"Acción e intención", step5Text:"¿Qué hiciste o qué pensaste hacer?", step6Title:"Resultado y sensación", step6Text:"¿Qué pasó después y cómo te sientes?",
+    contactTypeLabel:"¿Cuál es el motivo de tu consulta?", contactTypePlaceholder:"Elige un motivo", contactTypeGeneral:"Pregunta general sobre KALY", contactTypeProfessional:"Profesional de salud o colaboración", contactTypeParticipation:"Participar en las pruebas o el desarrollo", contactTypeOther:"Otra consulta", contactOrganization:"Organización o centro", contactFunction:"Tu función", contactParticipation:"¿Cómo te gustaría participar?", participationChoose:"Elige una opción", participationTest:"Probar la aplicación", participationFeedback:"Dar tu opinión o proponer mejoras", participationContribute:"Contribuir al desarrollo del proyecto",
+
     contactEyebrow:"CONTACTO",
     contactTitle:"¿Tienes alguna pregunta sobre KALY?",
     contactIntro:"Si tienes preguntas sobre el proyecto o el sitio web, puedes escribirnos mediante el formulario.",
@@ -237,6 +245,10 @@ const translations = {
     approachNote:"The aim is to provide more structured information to describe personal experience and, if desired, discuss it with a health professional.",
     disclaimer:"KALY is presented here as an app project. The information and patterns shown are intended to support observation and dialogue; they are not a diagnosis or medical recommendation and do not establish causality.",
     legalBack:"Back to website", navContact:"Contact",
+    trackerEyebrow:"THE TRACKER JOURNEY", trackerTitle:"One episode, six short steps", trackerIntro:"The user moves through the steps one by one. Answers stay brief and describe the context without trying to explain everything.",
+    step1Title:"Situation", step1Text:"Where are you and what is happening?", step2Title:"Thoughts and intensity", step2Text:"What thoughts are present, and how intense are they?", step3Title:"Body and hunger", step3Text:"What sensations do you notice? Are you hungry?", step4Title:"Emotions and context", step4Text:"Which emotion or contextual factor is present?", step5Title:"Action and intention", step5Text:"What did you do or consider doing?", step6Title:"Outcome and feelings", step6Text:"What happened next, and how do you feel?",
+    contactTypeLabel:"What is the reason for your enquiry?", contactTypePlaceholder:"Choose a reason", contactTypeGeneral:"General question about KALY", contactTypeProfessional:"Healthcare professional or partnership", contactTypeParticipation:"Take part in testing or development", contactTypeOther:"Other enquiry", contactOrganization:"Organisation or institution", contactFunction:"Your role", contactParticipation:"How would you like to take part?", participationChoose:"Choose an option", participationTest:"Test the app", participationFeedback:"Give feedback or suggest improvements", participationContribute:"Contribute to the project’s development",
+
     contactEyebrow:"CONTACT",
     contactTitle:"Questions about KALY?",
     contactIntro:"For questions about the project or this website, you can write to us using the form.",
@@ -353,6 +365,23 @@ const yearNode = document.getElementById("year");
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 
 const contactForm = document.getElementById("contact-form");
+const contactType = document.getElementById("contact-type");
+const contactFields = document.getElementById("contact-fields");
+const professionalFields = document.getElementById("professional-fields");
+const participationFields = document.getElementById("participation-fields");
+
+function updateContactFields() {
+  if (!contactType || !contactFields) return;
+  const type = contactType.value;
+  contactFields.hidden = !type;
+  if (professionalFields) professionalFields.hidden = type !== "professional";
+  if (participationFields) participationFields.hidden = type !== "participation";
+  const organization = document.getElementById("contact-organization");
+  const participation = document.getElementById("contact-participation");
+  if (organization) organization.required = type === "professional";
+  if (participation) participation.required = type === "participation";
+}
+if (contactType) contactType.addEventListener("change", updateContactFields);
 if (contactForm) {
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -363,16 +392,20 @@ if (contactForm) {
     const status = document.getElementById("contact-status");
     const formData = new FormData(contactForm);
 
-    // Ignore automated submissions caught by the hidden honeypot field.
     if (formData.get("website")) {
       contactForm.reset();
+      updateContactFields();
       if (status) status.textContent = dictionary.formSuccess;
       return;
     }
 
     const payload = {
+      requestType: String(formData.get("requestType") || "").trim(),
       name: String(formData.get("name") || "").trim(),
       email: String(formData.get("email") || "").trim(),
+      organization: String(formData.get("organization") || "").trim(),
+      function: String(formData.get("function") || "").trim(),
+      participation: String(formData.get("participation") || "").trim(),
       subject: String(formData.get("subject") || "").trim(),
       message: String(formData.get("message") || "").trim(),
       website: String(formData.get("website") || "")
@@ -400,6 +433,7 @@ if (contactForm) {
       }
 
       contactForm.reset();
+      updateContactFields();
       if (status) {
         status.textContent = dictionary.formSuccess;
         status.className = "form-status is-success";
