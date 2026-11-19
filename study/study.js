@@ -276,6 +276,58 @@ function startSurvey(which) {
   window.scrollTo({top: $("#survey").offsetTop - 30, behavior: "smooth"});
 }
 
+async function submitSurvey() {
+  const nextButton = $("#nextButton");
+  const previousButton = $("#previousButton");
+  const message = $("#submitMessage");
+  nextButton.disabled = true;
+  previousButton.disabled = true;
+  nextButton.textContent = lang === "fr" ? "Envoi…" : "Enviando…";
+  message.classList.remove("hidden");
+  message.textContent = t("sending");
+
+  // Q12 et Q13 ne doivent pas être conservées si la condition d'affichage n'est plus remplie.
+  const payloadAnswers = { ...answers };
+  const q11 = String(payloadAnswers["11"] || "");
+  if (!(q11.startsWith("Oui") || q11.startsWith("Sí"))) {
+    delete payloadAnswers["12"];
+    delete payloadAnswers["13"];
+  }
+
+  const country = String(payloadAnswers["1"] || "");
+  const payload = {
+    respondent_type: profile,
+    language: lang,
+    country: country && !/préfère ne pas|prefiero no/i.test(country) ? country : null,
+    answers: payloadAnswers,
+    schema_version: "V0.3"
+  };
+
+  try {
+    const response = await fetch("/api/study-submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || !result.success) {
+      throw new Error(result.error || "Submission failed");
+    }
+    $("#questions").innerHTML = `<div class="completion"><h3>${t("endTitle")}</h3><p>${t("endText")}</p></div>`;
+    nextButton.classList.add("hidden");
+    previousButton.classList.add("hidden");
+    message.textContent = t("submitted");
+    message.classList.remove("error");
+  } catch (error) {
+    console.error("KALY study submission error:", error);
+    message.textContent = t("submitError");
+    message.classList.add("error");
+    nextButton.disabled = false;
+    previousButton.disabled = false;
+    nextButton.textContent = lang === "fr" ? "Réessayer" : "Reintentar";
+  }
+}
+
 $("#changeProfile").addEventListener("click", () => {
   profile = null;
   $("#survey").classList.add("hidden");
@@ -292,11 +344,7 @@ $("#nextButton").addEventListener("click", () => {
     currentIndex++; renderQuestion();
     window.scrollTo({top: $("#survey").offsetTop - 20, behavior:"smooth"});
   } else {
-    $("#questions").innerHTML = `<div class="completion"><h3>${t("endTitle")}</h3><p>${t("endText")}</p></div>`;
-    $("#previousButton").classList.add("hidden");
-    $("#nextButton").classList.add("hidden");
-    $("#submitMessage").classList.remove("hidden");
-    $("#submitMessage").textContent = t("submissionNote");
+    submitSurvey();
   }
 });
 document.querySelectorAll("[data-lang]").forEach(btn => btn.addEventListener("click", () => { if (!profile) setLanguage(btn.dataset.lang); }));
