@@ -793,3 +793,6 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
  .contact-section { padding-top:36px; padding-bottom:36px; }
  .contact-grid { grid-template-columns:1fr; gap:14px; }
 }
+
+/* V21 — entrée vers l'étude de marché */
+.desktop-nav a[href='study/'], .mobile-nav a[href='study/'] { color: var(--blue, #4A697D); font-weight: 650; }
