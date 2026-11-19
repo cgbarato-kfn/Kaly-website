@@ -87,18 +87,18 @@ export async function onRequestPost({ request, env }) {
   }
 
   try {
-    await env.DB.prepare(`
-      INSERT INTO study_responses
-        (response_id, respondent_type, language, country, answers_json, schema_version)
-      VALUES (?, ?, ?, ?, ?, ?)
-    `).bind(
-      responseId,
-      data.respondent_type,
-      data.language,
-      country,
-      answersJson,
-      SCHEMA_VERSION
-    ).run();
+await env.DB.prepare(`
+  INSERT INTO study_responses
+    (response_id, respondent_type, language, country, answers_json, schema_version, created_at)
+  VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)
+`).bind(
+  responseId,
+  data.respondent_type,
+  data.language,
+  country,
+  answersJson,
+  SCHEMA_VERSION
+).run();
   } catch (error) {
     console.error("D1 study response insert failed:", error);
     return json({ success: false, error: "Could not save response" }, 500);
