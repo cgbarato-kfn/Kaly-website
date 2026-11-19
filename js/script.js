@@ -1,5 +1,7 @@
 const translations = {
   fr: {
+    moreAboutRecords:"Voir les éléments suivis", moreTrackDetails:"Voir les informations enregistrées", moreAnalysisDetails:"Voir les éléments analysés", moreEvolutionDetails:"Voir les éléments de suivi", moreProfessional:"Voir les apports possibles",
+
     moreInfo:"En savoir plus",
     skip:"Aller au contenu", navAbout:"KALY", navAudience:"Pour qui ?", navHow:"Comment ça fonctionne", navFeatures:"Pour les professionnels de santé", navApproach:"Ce que KALY ne fait pas",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
@@ -102,6 +104,8 @@ const translations = {
     footerLine:"Food Noise & Metabolic Tracking"
   },
   es: {
+    moreAboutRecords:"Ver los elementos registrados", moreTrackDetails:"Ver la información registrada", moreAnalysisDetails:"Ver los elementos analizados", moreEvolutionDetails:"Ver los elementos de seguimiento", moreProfessional:"Ver las posibles aportaciones",
+
     moreInfo:"Ver más",
     skip:"Ir al contenido", navAbout:"KALY", navAudience:"¿Para quién?", navHow:"Cómo funciona", navFeatures:"Para profesionales de salud", navApproach:"Lo que KALY no hace",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
@@ -204,6 +208,8 @@ const translations = {
     footerLine:"Food Noise & Metabolic Tracking"
   },
   en: {
+    moreAboutRecords:"See what is tracked", moreTrackDetails:"See recorded information", moreAnalysisDetails:"See what is analysed", moreEvolutionDetails:"See what is tracked over time", moreProfessional:"See potential benefits",
+
     moreInfo:"Learn more",
     skip:"Skip to content", navAbout:"KALY", navAudience:"Who is it for?", navHow:"How it works", navFeatures:"For healthcare professionals", navApproach:"What KALY does not do",
     eyebrow:"FOOD NOISE & METABOLIC TRACKING",
