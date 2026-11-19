@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F8F8F8">
+  <meta name="description" content="Participez à l’étude de marché internationale de KALY. Deux questionnaires : utilisateurs potentiels et professionnels de santé.">
+  <title>Étude de marché — KALY</title>
+  <link rel="icon" type="image/png" href="../assets/kaly_icon.png">
+  <link rel="stylesheet" href="study.css?v=1">
+  <script defer src="study.js?v=1"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="study-header">
+    <a class="brand" href="../" aria-label="KALY — accueil"><img src="../assets/KALY_LOGOOK.png" alt="KALY"></a>
+    <div class="header-right">
+      <a class="back-link" href="../">← <span data-t="back">Retour au site</span></a>
+      <div class="lang-switch" role="group" aria-label="Langue">
+        <button type="button" data-lang="fr" class="active" aria-pressed="true">FR</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro" id="intro">
+      <p class="eyebrow" data-t="eyebrow">KALY · ÉTUDE DE MARCHÉ INTERNATIONALE</p>
+      <h1 data-t="title">Votre expérience peut contribuer à faire évoluer KALY.</h1>
+      <p class="lead" data-t="lead">Nous souhaitons mieux comprendre les besoins liés au Food Noise et recueillir les attentes des personnes concernées ainsi que des professionnels de santé.</p>
+      <div class="intro-facts">
+        <div><strong data-t="timeTitle">Quelques minutes</strong><span data-t="timeText">6 à 8 min pour les utilisateurs · 5 à 7 min pour les professionnels</span></div>
+        <div><strong data-t="anonymousTitle">Sans compte</strong><span data-t="anonymousText">La participation ne nécessite pas de créer un compte KALY.</span></div>
+        <div><strong data-t="langTitle">Deux langues</strong><span data-t="langText">Questionnaires disponibles en français et en espagnol.</span></div>
+      </div>
+    </section>
+
+    <section class="choice" id="choice">
+      <div class="section-heading">
+        <p class="eyebrow" data-t="step1">ÉTAPE 1</p>
+        <h2 data-t="chooseProfile">Quel profil vous correspond ?</h2>
+        <p data-t="chooseText">Choisissez le questionnaire adapté à votre situation.</p>
+      </div>
+      <div class="profile-grid">
+        <button class="profile-card" type="button" data-profile="user">
+          <span class="card-index">01</span>
+          <span class="card-title" data-t="userTitle">Je participe en tant qu’utilisateur potentiel</span>
+          <span class="card-copy" data-t="userText">Pour les personnes majeures qui souhaitent partager leur expérience, leurs besoins ou leur intérêt pour KALY.</span>
+          <span class="card-bottom"><span data-t="userDuration">28 questions · 6 à 8 minutes</span><span aria-hidden="true">↗</span></span>
+        </button>
+        <button class="profile-card" type="button" data-profile="pro">
+          <span class="card-index">02</span>
+          <span class="card-title" data-t="proTitle">Je suis professionnel de santé</span>
+          <span class="card-copy" data-t="proText">Pour les professionnels qui accompagnent des personnes concernées par les comportements alimentaires ou le Food Noise.</span>
+          <span class="card-bottom"><span data-t="proDuration">15 questions · 5 à 7 minutes</span><span aria-hidden="true">↗</span></span>
+        </button>
+      </div>
+      <p class="small-note" data-t="scopeNote">Cette étude porte sur les besoins, les attentes et l’utilité perçue de KALY. Elle ne constitue pas une étude clinique et ne mesure pas un impact thérapeutique.</p>
+    </section>
+
+    <section class="survey hidden" id="survey" aria-live="polite">
+      <div class="survey-top">
+        <button type="button" class="text-button" id="changeProfile">← <span data-t="changeProfile">Changer de profil</span></button>
+        <span class="survey-kind" id="surveyKind"></span>
+      </div>
+      <div class="survey-heading">
+        <p class="eyebrow" data-t="step2">ÉTAPE 2 · QUESTIONNAIRE</p>
+        <h2 id="surveyTitle"></h2>
+        <p id="surveyDescription"></p>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-label"><span id="progressText">0 / 28</span><span id="progressPercent">0 %</span></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+      </div>
+      <form id="surveyForm" novalidate>
+        <div id="questions"></div>
+        <div class="form-actions">
+          <button type="button" class="secondary-button" id="previousButton" disabled data-t="previous">Précédent</button>
+          <button type="button" class="primary-button" id="nextButton" data-t="next">Continuer</button>
+        </div>
+        <p class="form-note" data-t="submissionNote">La collecte des réponses sera activée après raccordement du système sécurisé de réception et de stockage.</p>
+        <div class="submit-message hidden" id="submitMessage" role="status"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="study-footer">
+    <span>© KALY</span>
+    <span data-t="footer">Étude de marché · Participation volontaire</span>
+    <a href="../">kalyfn.com</a>
+  </footer>
+</body>
+</html>

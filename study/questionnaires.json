@@ -1,0 +1,1268 @@
+{
+  "user_fr": [
+    {
+      "number": 1,
+      "label": "Dans quel pays résidez-vous actuellement ?",
+      "type": "Liste déroulante",
+      "options": [
+        "France",
+        "Colombie",
+        "Pérou",
+        "Mexique",
+        "Autre pays (à préciser)",
+        "Je préfère ne pas répondre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 2,
+      "label": "Dans quelle tranche d'âge vous situez-vous ?",
+      "type": "Choix unique",
+      "options": [
+        "18–24 ans",
+        "25–34 ans",
+        "35–44 ans",
+        "45–54 ans",
+        "55–64 ans",
+        "65 ans ou plus",
+        "Je préfère ne pas répondre"
+      ],
+      "notes": [
+        "Note de relecture : Confirmer si l'étude cible exclusivement les adultes."
+      ]
+    },
+    {
+      "number": 3,
+      "label": "Quel est votre genre ?",
+      "type": "Choix unique facultatif",
+      "options": [
+        "Femme",
+        "Homme",
+        "Non-binaire",
+        "Autre (à préciser)",
+        "Je préfère ne pas répondre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 4,
+      "label": "Comment décririez-vous votre situation actuelle ?",
+      "type": "Choix multiple",
+      "options": [
+        "Études",
+        "Activité professionnelle",
+        "Recherche d'emploi",
+        "Retraite",
+        "Autre",
+        "Je préfère ne pas répondre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 5,
+      "label": "Avant cette enquête, connaissiez-vous l'expression « Food Noise » (préoccupation ou pensées répétitives autour de la nourriture) ?",
+      "type": "Choix unique",
+      "options": [
+        "Oui, très bien",
+        "Oui, un peu",
+        "Non, jamais"
+      ],
+      "notes": []
+    },
+    {
+      "number": 6,
+      "label": "Vous arrive-t-il de penser à la nourriture de manière répétitive, même sans sensation physique de faim ?",
+      "type": "Choix unique",
+      "options": [
+        "Très souvent",
+        "Souvent",
+        "Parfois",
+        "Rarement",
+        "Jamais",
+        "Je ne sais pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 7,
+      "label": "Dans quelle mesure ces pensées autour de la nourriture vous semblent-elles envahissantes ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Pas du tout envahissantes",
+        "2",
+        "3",
+        "4",
+        "5 Extrêmement envahissantes",
+        "Non concerné(e)"
+      ],
+      "notes": []
+    },
+    {
+      "number": 8,
+      "label": "Dans quelles situations ces pensées apparaissent-elles le plus souvent ?",
+      "type": "Choix multiple",
+      "options": [
+        "En période de stress",
+        "En cas d'ennui",
+        "Le soir ou la nuit",
+        "Après une journée difficile",
+        "En présence de nourriture",
+        "Après avoir mangé",
+        "Sans situation particulière",
+        "Autre",
+        "Je ne sais pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 9,
+      "label": "Quelles conséquences peuvent-elles avoir sur votre quotidien ?",
+      "type": "Choix multiple",
+      "options": [
+        "Difficulté à me concentrer",
+        "Gêne ou culpabilité",
+        "Grignotage non prévu",
+        "Difficulté à distinguer faim et envie",
+        "Impact sur le sommeil",
+        "Peu ou pas de conséquence",
+        "Autre",
+        "Je préfère ne pas répondre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 10,
+      "label": "Aujourd'hui, comment gérez-vous ces pensées ou envies alimentaires ?",
+      "type": "Choix multiple",
+      "options": [
+        "Je les ignore",
+        "Je mange",
+        "Je cherche à me distraire",
+        "Je note ce que je ressens",
+        "J'en parle à quelqu'un",
+        "Je consulte un professionnel",
+        "Je n'ai pas de méthode particulière",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 11,
+      "label": "Avez-vous déjà utilisé un outil ou une application pour suivre votre alimentation ou vos comportements alimentaires ?",
+      "type": "Choix unique",
+      "options": [
+        "Oui, actuellement",
+        "Oui, par le passé",
+        "Non, jamais"
+      ],
+      "notes": []
+    },
+    {
+      "number": 12,
+      "label": "Si oui, quel type d'outil avez-vous utilisé ?",
+      "type": "Choix multiple — conditionnel",
+      "options": [
+        "Journal alimentaire",
+        "Comptage des calories ou macronutriments",
+        "Suivi du poids ou des mensurations",
+        "Application de santé/bien-être",
+        "Journal des émotions",
+        "Autre",
+        "Je ne sais plus"
+      ],
+      "notes": [
+        "Note de relecture : Afficher si Q11 = oui, actuellement ou par le passé."
+      ]
+    },
+    {
+      "number": 13,
+      "label": "Qu'est-ce qui vous a manqué dans ces outils ?",
+      "type": "Choix multiple — conditionnel",
+      "options": [
+        "Comprendre les déclencheurs",
+        "Relier pensées, émotions et comportements",
+        "Suivre la faim et les sensations corporelles",
+        "Visualiser mon évolution",
+        "Partager une synthèse avec un professionnel",
+        "Simplicité d'utilisation",
+        "Rien ne m'a manqué",
+        "Autre"
+      ],
+      "notes": [
+        "Note de relecture : Afficher si Q11 = oui, actuellement ou par le passé."
+      ]
+    },
+    {
+      "number": 14,
+      "label": "Dans quelle mesure souhaiteriez-vous mieux comprendre les situations qui déclenchent vos pensées ou envies alimentaires ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Pas du tout",
+        "2",
+        "3",
+        "4",
+        "5 Beaucoup",
+        "Je ne sais pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 15,
+      "label": "Parmi les éléments suivants, lesquels aimeriez-vous pouvoir noter ?",
+      "type": "Choix multiple",
+      "options": [
+        "Situation et contexte",
+        "Pensées du moment",
+        "Intensité des pensées",
+        "Sensation de faim",
+        "Sensations corporelles",
+        "Émotions",
+        "Besoin ressenti",
+        "Action réalisée",
+        "Résultat ou ressenti après l'action",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 16,
+      "label": "Quelle importance accordez-vous à la possibilité d'observer vos habitudes sans compter les calories ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Aucune importance",
+        "2",
+        "3",
+        "4",
+        "5 Très importante",
+        "Sans opinion"
+      ],
+      "notes": []
+    },
+    {
+      "number": 17,
+      "label": "Quelles fonctionnalités vous sembleraient les plus utiles ?",
+      "type": "Choix multiple — maximum 5",
+      "options": [
+        "Journal d'épisodes Food Noise",
+        "Suivi des émotions et du contexte",
+        "Repères faim/satiété",
+        "Analyse des tendances",
+        "Suivi de l'évolution dans le temps",
+        "Synthèse partageable avec un professionnel",
+        "Exercices de respiration",
+        "Rappels personnalisables",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 18,
+      "label": "À quelle fréquence seriez-vous susceptible d'utiliser un tel outil ?",
+      "type": "Choix unique",
+      "options": [
+        "Plusieurs fois par jour",
+        "Une fois par jour",
+        "Quelques fois par semaine",
+        "Une fois par semaine",
+        "Moins souvent",
+        "Je ne l'utiliserais probablement pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 19,
+      "label": "Quel format vous conviendrait le mieux ?",
+      "type": "Choix unique",
+      "options": [
+        "Application mobile",
+        "Site web",
+        "Les deux",
+        "Sans préférence"
+      ],
+      "notes": []
+    },
+    {
+      "number": 20,
+      "label": "Qu'est-ce qui pourrait vous empêcher d'utiliser KALY ?",
+      "type": "Choix multiple",
+      "options": [
+        "Manque de temps",
+        "Saisie trop longue",
+        "Trop de notifications",
+        "Préoccupations concernant la confidentialité",
+        "Prix",
+        "Je préfère un suivi avec un professionnel",
+        "Je ne ressens pas ce besoin",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 21,
+      "label": "Quelle importance accordez-vous à la confidentialité et au contrôle de vos données ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Peu importante",
+        "2",
+        "3",
+        "4",
+        "5 Essentielle"
+      ],
+      "notes": []
+    },
+    {
+      "number": 22,
+      "label": "Dans quelle mesure seriez-vous intéressé(e) par une synthèse de vos observations à partager avec un professionnel de santé ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Pas du tout",
+        "2",
+        "3",
+        "4",
+        "5 Très intéressé(e)",
+        "Non concerné(e)"
+      ],
+      "notes": []
+    },
+    {
+      "number": 23,
+      "label": "Après cette description, quel est votre niveau d'intérêt pour KALY ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Aucun intérêt",
+        "2",
+        "3",
+        "4",
+        "5 Très intéressé(e)"
+      ],
+      "notes": [
+        "Note de relecture : Présenter une description neutre et identique dans toutes les langues avant cette question."
+      ]
+    },
+    {
+      "number": 24,
+      "label": "Quelle serait la principale raison de votre intérêt ou de votre absence d'intérêt ?",
+      "type": "Réponse libre",
+      "options": [
+        "Texte libre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 25,
+      "label": "Si KALY répondait à vos besoins, quelle formule préféreriez-vous ?",
+      "type": "Choix unique",
+      "options": [
+        "Gratuite avec fonctionnalités essentielles",
+        "Gratuite avec options payantes",
+        "Abonnement mensuel",
+        "Paiement annuel",
+        "Accès financé par un professionnel ou une structure",
+        "Je ne sais pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 26,
+      "label": "Quel prix mensuel vous semblerait acceptable pour une version complète ?",
+      "type": "Choix unique — affichage dynamique selon le pays choisi à la question 1",
+      "options": [
+        "Je ne paierais pas",
+        "France : moins de 3 €",
+        "France : 3 à 5 €",
+        "France : 6 à 9 €",
+        "France : 10 à 14 €",
+        "France : 15 € ou plus",
+        "Colombie : moins de 12 000 COP",
+        "Colombie : 12 000 à 20 000 COP",
+        "Colombie : 21 000 à 35 000 COP",
+        "Colombie : 36 000 à 55 000 COP",
+        "Colombie : plus de 55 000 COP",
+        "Pérou : moins de 12 PEN",
+        "Pérou : 12 à 20 PEN",
+        "Pérou : 21 à 35 PEN",
+        "Pérou : 36 à 55 PEN",
+        "Pérou : plus de 55 PEN",
+        "Mexique : moins de 60 MXN",
+        "Mexique : 60 à 100 MXN",
+        "Mexique : 101 à 180 MXN",
+        "Mexique : 181 à 280 MXN",
+        "Mexique : plus de 280 MXN",
+        "Cela dépend des fonctionnalités",
+        "Je ne sais pas",
+        "Note d’intégration : ne présenter que les cinq tranches correspondant au pays sélectionné à la question 1. Ne pas afficher les montants des autres pays."
+      ],
+      "notes": []
+    },
+    {
+      "number": 27,
+      "label": "Quelles seraient les trois conditions les plus importantes pour que vous utilisiez KALY ?",
+      "type": "Réponse libre",
+      "options": [
+        "Texte libre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 28,
+      "label": "Souhaitez-vous être contacté(e) pour participer éventuellement à un test pilote de KALY ?",
+      "type": "Choix unique facultatif",
+      "options": [
+        "Oui",
+        "Non"
+      ],
+      "notes": [
+        "Note de relecture : Si oui, afficher un formulaire de contact séparé, non relié aux réponses du questionnaire."
+      ]
+    }
+  ],
+  "user_es": [
+    {
+      "number": 1,
+      "label": "¿En qué país reside actualmente?",
+      "type": "Lista desplegable",
+      "options": [
+        "Francia",
+        "Colombia",
+        "Perú",
+        "México",
+        "Otro país (especificar)",
+        "Prefiero no responder"
+      ],
+      "notes": []
+    },
+    {
+      "number": 2,
+      "label": "¿En qué grupo de edad se encuentra?",
+      "type": "Respuesta única",
+      "options": [
+        "18–24",
+        "25–34",
+        "35–44",
+        "45–54",
+        "55–64",
+        "65 años o más",
+        "Prefiero no responder"
+      ],
+      "notes": [
+        "Note de relecture : Confirmar si el estudio se dirige exclusivamente a adultos."
+      ]
+    },
+    {
+      "number": 3,
+      "label": "¿Cuál es su género?",
+      "type": "Respuesta única facultativa",
+      "options": [
+        "Mujer",
+        "Hombre",
+        "No binario",
+        "Otro (especificar)",
+        "Prefiero no responder"
+      ],
+      "notes": []
+    },
+    {
+      "number": 4,
+      "label": "¿Cómo describiría su situación actual?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Estudios",
+        "Trabajo",
+        "Búsqueda de empleo",
+        "Jubilación",
+        "Otra",
+        "Prefiero no responder"
+      ],
+      "notes": []
+    },
+    {
+      "number": 5,
+      "label": "Antes de esta encuesta, ¿conocía la expresión «Food Noise» (pensamientos o preocupaciones repetitivas sobre la comida)?",
+      "type": "Respuesta única",
+      "options": [
+        "Sí, muy bien",
+        "Sí, un poco",
+        "No, nunca"
+      ],
+      "notes": []
+    },
+    {
+      "number": 6,
+      "label": "¿Le ocurre pensar repetidamente en la comida, incluso sin sentir hambre física?",
+      "type": "Respuesta única",
+      "options": [
+        "Muy a menudo",
+        "A menudo",
+        "A veces",
+        "Rara vez",
+        "Nunca",
+        "No lo sé"
+      ],
+      "notes": []
+    },
+    {
+      "number": 7,
+      "label": "¿En qué medida siente que esos pensamientos sobre la comida invaden su atención?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Nada",
+        "2",
+        "3",
+        "4",
+        "5 Muchísimo",
+        "No aplica"
+      ],
+      "notes": []
+    },
+    {
+      "number": 8,
+      "label": "¿En qué situaciones aparecen con mayor frecuencia esos pensamientos?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "En momentos de estrés",
+        "Cuando me aburro",
+        "Por la tarde o por la noche",
+        "Después de un día difícil",
+        "Al estar cerca de comida",
+        "Después de comer",
+        "Sin una situación concreta",
+        "Otra",
+        "No lo sé"
+      ],
+      "notes": []
+    },
+    {
+      "number": 9,
+      "label": "¿Qué consecuencias pueden tener en su vida cotidiana?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Dificultad para concentrarme",
+        "Malestar o culpa",
+        "Comer entre comidas sin planearlo",
+        "Dificultad para distinguir hambre y antojo",
+        "Efectos en el sueño",
+        "Pocas o ninguna consecuencia",
+        "Otra",
+        "Prefiero no responder"
+      ],
+      "notes": []
+    },
+    {
+      "number": 10,
+      "label": "Actualmente, ¿cómo gestiona esos pensamientos o deseos de comer?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Los ignoro",
+        "Como",
+        "Busco distraerme",
+        "Anoto lo que siento",
+        "Hablo con alguien",
+        "Consulto a un profesional",
+        "No tengo un método específico",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 11,
+      "label": "¿Ha utilizado alguna herramienta o aplicación para hacer seguimiento de su alimentación o conducta alimentaria?",
+      "type": "Respuesta única",
+      "options": [
+        "Sí, actualmente",
+        "Sí, anteriormente",
+        "No, nunca"
+      ],
+      "notes": []
+    },
+    {
+      "number": 12,
+      "label": "Si respondió que sí, ¿qué tipo de herramienta utilizó?",
+      "type": "Respuesta múltiple — condicional",
+      "options": [
+        "Diario de alimentación",
+        "Conteo de calorías o macronutrientes",
+        "Seguimiento del peso o medidas",
+        "Aplicación de salud o bienestar",
+        "Diario de emociones",
+        "Otra",
+        "No lo recuerdo"
+      ],
+      "notes": [
+        "Note de relecture : Mostrar si Q11 = sí, actualmente o anteriormente."
+      ]
+    },
+    {
+      "number": 13,
+      "label": "¿Qué aspectos echó en falta en esas herramientas?",
+      "type": "Respuesta múltiple — condicional",
+      "options": [
+        "Comprender los desencadenantes",
+        "Relacionar pensamientos, emociones y conductas",
+        "Seguir el hambre y las sensaciones corporales",
+        "Visualizar mi evolución",
+        "Compartir un resumen con un profesional",
+        "Facilidad de uso",
+        "No eché nada en falta",
+        "Otra"
+      ],
+      "notes": [
+        "Note de relecture : Mostrar si Q11 = sí, actualmente o anteriormente."
+      ]
+    },
+    {
+      "number": 14,
+      "label": "¿Cuánto le gustaría comprender mejor las situaciones que desencadenan sus pensamientos o deseos de comer?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Nada",
+        "2",
+        "3",
+        "4",
+        "5 Mucho",
+        "No lo sé"
+      ],
+      "notes": []
+    },
+    {
+      "number": 15,
+      "label": "¿Qué aspectos le gustaría poder registrar?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Situación y contexto",
+        "Pensamientos del momento",
+        "Intensidad de los pensamientos",
+        "Sensación de hambre",
+        "Sensaciones corporales",
+        "Emociones",
+        "Necesidad percibida",
+        "Acción realizada",
+        "Resultado o sensación posterior",
+        "Otro"
+      ],
+      "notes": []
+    },
+    {
+      "number": 16,
+      "label": "¿Qué importancia tiene para usted poder observar sus hábitos sin contar calorías?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Ninguna",
+        "2",
+        "3",
+        "4",
+        "5 Muchísima",
+        "Sin opinión"
+      ],
+      "notes": []
+    },
+    {
+      "number": 17,
+      "label": "¿Qué funcionalidades le resultarían más útiles?",
+      "type": "Respuesta múltiple — máximo 5",
+      "options": [
+        "Diario de episodios de Food Noise",
+        "Seguimiento de emociones y contexto",
+        "Referencias de hambre y saciedad",
+        "Análisis de tendencias",
+        "Seguimiento de la evolución",
+        "Resumen para compartir con un profesional",
+        "Ejercicios de respiración",
+        "Recordatorios personalizables",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 18,
+      "label": "¿Con qué frecuencia cree que utilizaría una herramienta así?",
+      "type": "Respuesta única",
+      "options": [
+        "Varias veces al día",
+        "Una vez al día",
+        "Algunas veces por semana",
+        "Una vez por semana",
+        "Con menor frecuencia",
+        "Probablemente no la utilizaría"
+      ],
+      "notes": []
+    },
+    {
+      "number": 19,
+      "label": "¿Qué formato preferiría?",
+      "type": "Respuesta única",
+      "options": [
+        "Aplicación móvil",
+        "Sitio web",
+        "Ambos",
+        "Sin preferencia"
+      ],
+      "notes": []
+    },
+    {
+      "number": 20,
+      "label": "¿Qué podría impedirle utilizar KALY?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Falta de tiempo",
+        "Registro demasiado largo",
+        "Demasiadas notificaciones",
+        "Preocupación por la privacidad",
+        "Precio",
+        "Prefiero el seguimiento con un profesional",
+        "No siento que lo necesite",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 21,
+      "label": "¿Qué importancia concede a la privacidad y al control de sus datos?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Poco importante",
+        "2",
+        "3",
+        "4",
+        "5 Esencial"
+      ],
+      "notes": []
+    },
+    {
+      "number": 22,
+      "label": "¿Le interesaría disponer de un resumen de sus observaciones para compartirlo con un profesional de salud?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Nada",
+        "2",
+        "3",
+        "4",
+        "5 Mucho",
+        "No aplica"
+      ],
+      "notes": []
+    },
+    {
+      "number": 23,
+      "label": "Después de esta descripción, ¿qué interés tiene en KALY?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Ningún interés",
+        "2",
+        "3",
+        "4",
+        "5 Muchísimo interés"
+      ],
+      "notes": [
+        "Note de relecture : Presentar una descripción neutral e idéntica en todos los idiomas antes de esta pregunta."
+      ]
+    },
+    {
+      "number": 24,
+      "label": "¿Cuál sería la principal razón de su interés o falta de interés?",
+      "type": "Respuesta abierta",
+      "options": [
+        "Texto libre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 25,
+      "label": "Si KALY respondiera a sus necesidades, ¿qué modalidad preferiría?",
+      "type": "Respuesta única",
+      "options": [
+        "Gratuita con funciones esenciales",
+        "Gratuita con opciones de pago",
+        "Suscripción mensual",
+        "Pago anual",
+        "Acceso financiado por un profesional o una organización",
+        "No lo sé"
+      ],
+      "notes": []
+    },
+    {
+      "number": 26,
+      "label": "¿Qué precio mensual le parecería aceptable para una versión completa?",
+      "type": "Respuesta única — visualización dinámica según el país seleccionado en la pregunta 1",
+      "options": [
+        "No pagaría",
+        "Francia: menos de 3 €",
+        "Francia: de 3 a 5 €",
+        "Francia: de 6 a 9 €",
+        "Francia: de 10 a 14 €",
+        "Francia: 15 € o más",
+        "Colombia: menos de 12.000 COP",
+        "Colombia: de 12.000 a 20.000 COP",
+        "Colombia: de 21.000 a 35.000 COP",
+        "Colombia: de 36.000 a 55.000 COP",
+        "Colombia: más de 55.000 COP",
+        "Perú: menos de 12 PEN",
+        "Perú: de 12 a 20 PEN",
+        "Perú: de 21 a 35 PEN",
+        "Perú: de 36 a 55 PEN",
+        "Perú: más de 55 PEN",
+        "México: menos de 60 MXN",
+        "México: de 60 a 100 MXN",
+        "México: de 101 a 180 MXN",
+        "México: de 181 a 280 MXN",
+        "México: más de 280 MXN",
+        "Depende de las funcionalidades",
+        "No lo sé",
+        "Nota de integración: mostrar únicamente los cinco rangos correspondientes al país seleccionado en la pregunta 1. No mostrar los importes de los demás países."
+      ],
+      "notes": []
+    },
+    {
+      "number": 27,
+      "label": "¿Cuáles serían las tres condiciones más importantes para que utilizara KALY?",
+      "type": "Respuesta abierta",
+      "options": [
+        "Texto libre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 28,
+      "label": "¿Le gustaría que le contactáramos para participar eventualmente en una prueba piloto de KALY?",
+      "type": "Respuesta única facultativa",
+      "options": [
+        "Sí",
+        "No"
+      ],
+      "notes": [
+        "Note de relecture : Si responde sí, mostrar un formulario de contacto separado, no vinculado a las respuestas."
+      ]
+    }
+  ],
+  "pro_fr": [
+    {
+      "number": 1,
+      "label": "Dans quel pays exercez-vous principalement ?",
+      "type": "Liste déroulante",
+      "options": [
+        "France",
+        "Colombie",
+        "Pérou",
+        "Mexique",
+        "Autre pays",
+        "Je préfère ne pas répondre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 2,
+      "label": "Quelle est votre profession ou spécialité ?",
+      "type": "Choix unique + autre",
+      "options": [
+        "Médecin généraliste",
+        "Endocrinologue/diabétologue",
+        "Diététicien(ne)-nutritionniste",
+        "Psychologue/psychiatre",
+        "Infirmier(ère)",
+        "Pharmacien(ne)",
+        "Autre professionnel de santé (préciser)"
+      ],
+      "notes": []
+    },
+    {
+      "number": 3,
+      "label": "Depuis combien de temps exercez-vous ?",
+      "type": "Choix unique",
+      "options": [
+        "Moins de 2 ans",
+        "2 à 5 ans",
+        "6 à 10 ans",
+        "11 à 20 ans",
+        "Plus de 20 ans"
+      ],
+      "notes": []
+    },
+    {
+      "number": 4,
+      "label": "Quels publics accompagnez-vous le plus souvent ?",
+      "type": "Choix multiple",
+      "options": [
+        "Personnes vivant avec un diabète",
+        "Personnes en situation de surpoids ou d'obésité",
+        "Personnes ayant des difficultés liées au comportement alimentaire",
+        "Personnes sous traitement influençant le poids ou l'appétit",
+        "Public général",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 5,
+      "label": "Dans votre pratique, à quelle fréquence les patients évoquent-ils des pensées alimentaires répétitives ou envahissantes (Food Noise) ?",
+      "type": "Choix unique",
+      "options": [
+        "Très souvent",
+        "Souvent",
+        "Parfois",
+        "Rarement",
+        "Jamais",
+        "Je ne connais pas ce terme"
+      ],
+      "notes": []
+    },
+    {
+      "number": 6,
+      "label": "Dans quelle mesure ce phénomène vous semble-t-il important dans l'accompagnement des personnes concernées ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Pas important",
+        "2",
+        "3",
+        "4",
+        "5 Très important",
+        "Sans opinion"
+      ],
+      "notes": []
+    },
+    {
+      "number": 7,
+      "label": "Quels sont les principaux défis que vous rencontrez pour comprendre ces situations avec les personnes que vous accompagnez ?",
+      "type": "Choix multiple",
+      "options": [
+        "Manque d'informations entre les consultations",
+        "Difficulté à identifier les déclencheurs",
+        "Difficulté à distinguer faim, envie et émotion",
+        "Manque d'outils de suivi",
+        "Temps limité en consultation",
+        "Difficulté à observer l'évolution",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 8,
+      "label": "Quels éléments seraient utiles à recueillir entre deux consultations ?",
+      "type": "Choix multiple",
+      "options": [
+        "Contexte et situation",
+        "Pensées",
+        "Intensité",
+        "Faim et satiété ressenties",
+        "Émotions",
+        "Comportements alimentaires",
+        "Besoins perçus",
+        "Résultats/ressentis",
+        "Évolution dans le temps",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 9,
+      "label": "Dans quelle mesure un journal structuré des épisodes de Food Noise pourrait-il compléter votre accompagnement ?",
+      "type": "Échelle 1 à 5",
+      "options": [
+        "1 Pas du tout",
+        "2",
+        "3",
+        "4",
+        "5 Très utile",
+        "Je ne sais pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 10,
+      "label": "Quelles fonctionnalités vous sembleraient les plus pertinentes dans un outil comme KALY ?",
+      "type": "Choix multiple — maximum 5",
+      "options": [
+        "Journal d'observation",
+        "Analyse de tendances",
+        "Suivi de l'évolution",
+        "Synthèse patient-professionnel",
+        "Export PDF",
+        "Données métaboliques déclaratives",
+        "Suivi des objectifs",
+        "Rappels",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 11,
+      "label": "Quels seraient les principaux freins à l'utilisation d'un tel outil dans votre pratique ?",
+      "type": "Choix multiple",
+      "options": [
+        "Temps supplémentaire",
+        "Charge de travail",
+        "Fiabilité des données",
+        "Confidentialité et sécurité",
+        "Intégration au parcours de soins",
+        "Manque de preuves d'utilité",
+        "Coût",
+        "Manque d'adhésion des patients",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 12,
+      "label": "Comment souhaiteriez-vous accéder aux informations partagées par les utilisateurs ?",
+      "type": "Choix unique",
+      "options": [
+        "Synthèse PDF",
+        "Tableau de bord web",
+        "Export de données",
+        "Intégration à un logiciel professionnel",
+        "Aucun accès nécessaire",
+        "Autre"
+      ],
+      "notes": []
+    },
+    {
+      "number": 13,
+      "label": "Quel serait, selon vous, le modèle de financement le plus pertinent ?",
+      "type": "Choix unique",
+      "options": [
+        "Gratuit pour les utilisateurs",
+        "Abonnement individuel",
+        "Financement par un établissement",
+        "Financement par un professionnel",
+        "Modèle mixte",
+        "Autre",
+        "Je ne sais pas"
+      ],
+      "notes": []
+    },
+    {
+      "number": 14,
+      "label": "Seriez-vous prêt(e) à participer à une phase pilote ou à tester KALY avec des utilisateurs volontaires ?",
+      "type": "Choix unique",
+      "options": [
+        "Oui",
+        "Peut-être",
+        "Non"
+      ],
+      "notes": []
+    },
+    {
+      "number": 15,
+      "label": "Souhaitez-vous ajouter un commentaire ou une recommandation concernant KALY ?",
+      "type": "Réponse libre",
+      "options": [
+        "Texte libre"
+      ],
+      "notes": []
+    }
+  ],
+  "pro_es": [
+    {
+      "number": 1,
+      "label": "¿En qué país ejerce principalmente?",
+      "type": "Lista desplegable",
+      "options": [
+        "Francia",
+        "Colombia",
+        "Perú",
+        "México",
+        "Otro país",
+        "Prefiero no responder"
+      ],
+      "notes": []
+    },
+    {
+      "number": 2,
+      "label": "¿Cuál es su profesión o especialidad?",
+      "type": "Respuesta única + otra",
+      "options": [
+        "Medicina general",
+        "Endocrinología/diabetología",
+        "Dietista-nutricionista",
+        "Psicología/psiquiatría",
+        "Enfermería",
+        "Farmacia",
+        "Otro profesional de salud (especificar)"
+      ],
+      "notes": []
+    },
+    {
+      "number": 3,
+      "label": "¿Cuánto tiempo lleva ejerciendo?",
+      "type": "Respuesta única",
+      "options": [
+        "Menos de 2 años",
+        "2 a 5 años",
+        "6 a 10 años",
+        "11 a 20 años",
+        "Más de 20 años"
+      ],
+      "notes": []
+    },
+    {
+      "number": 4,
+      "label": "¿Qué perfiles atiende con mayor frecuencia?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Personas con diabetes",
+        "Personas con sobrepeso u obesidad",
+        "Personas con dificultades relacionadas con la conducta alimentaria",
+        "Personas en tratamiento que influye en el peso o el apetito",
+        "Población general",
+        "Otro"
+      ],
+      "notes": []
+    },
+    {
+      "number": 5,
+      "label": "En su práctica, ¿con qué frecuencia los pacientes mencionan pensamientos repetitivos o intrusivos sobre la comida (Food Noise)?",
+      "type": "Respuesta única",
+      "options": [
+        "Muy a menudo",
+        "A menudo",
+        "A veces",
+        "Rara vez",
+        "Nunca",
+        "No conozco este término"
+      ],
+      "notes": []
+    },
+    {
+      "number": 6,
+      "label": "¿Qué importancia considera que tiene este fenómeno en el acompañamiento de las personas?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Nada importante",
+        "2",
+        "3",
+        "4",
+        "5 Muy importante",
+        "Sin opinión"
+      ],
+      "notes": []
+    },
+    {
+      "number": 7,
+      "label": "¿Cuáles son las principales dificultades para comprender estas situaciones con las personas que atiende?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Falta de información entre consultas",
+        "Dificultad para identificar desencadenantes",
+        "Dificultad para distinguir hambre, deseo y emoción",
+        "Falta de herramientas de seguimiento",
+        "Tiempo limitado en consulta",
+        "Dificultad para observar la evolución",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 8,
+      "label": "¿Qué información sería útil recoger entre consultas?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Contexto y situación",
+        "Pensamientos",
+        "Intensidad",
+        "Hambre y saciedad percibidas",
+        "Emociones",
+        "Conductas alimentarias",
+        "Necesidades percibidas",
+        "Resultados o sensaciones posteriores",
+        "Evolución en el tiempo",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 9,
+      "label": "¿En qué medida un diario estructurado de episodios de Food Noise podría complementar su acompañamiento?",
+      "type": "Escala 1 a 5",
+      "options": [
+        "1 Nada",
+        "2",
+        "3",
+        "4",
+        "5 Mucho",
+        "No lo sé"
+      ],
+      "notes": []
+    },
+    {
+      "number": 10,
+      "label": "¿Qué funcionalidades le parecerían más pertinentes en una herramienta como KALY?",
+      "type": "Respuesta múltiple — máximo 5",
+      "options": [
+        "Diario de observación",
+        "Análisis de tendencias",
+        "Seguimiento de la evolución",
+        "Resumen para paciente y profesional",
+        "Exportación PDF",
+        "Datos metabólicos declarados",
+        "Seguimiento de objetivos",
+        "Recordatorios",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 11,
+      "label": "¿Cuáles serían los principales obstáculos para utilizar una herramienta así en su práctica?",
+      "type": "Respuesta múltiple",
+      "options": [
+        "Tiempo adicional",
+        "Carga de trabajo",
+        "Fiabilidad de los datos",
+        "Privacidad y seguridad",
+        "Integración en la atención",
+        "Falta de evidencia de utilidad",
+        "Coste",
+        "Falta de adherencia de los pacientes",
+        "Otro"
+      ],
+      "notes": []
+    },
+    {
+      "number": 12,
+      "label": "¿Cómo preferiría acceder a la información compartida por los usuarios?",
+      "type": "Respuesta única",
+      "options": [
+        "Resumen PDF",
+        "Panel web",
+        "Exportación de datos",
+        "Integración con un software profesional",
+        "No necesito acceso",
+        "Otra"
+      ],
+      "notes": []
+    },
+    {
+      "number": 13,
+      "label": "¿Qué modelo de financiación le parecería más adecuado?",
+      "type": "Respuesta única",
+      "options": [
+        "Gratuito para los usuarios",
+        "Suscripción individual",
+        "Financiación por una institución",
+        "Financiación por un profesional",
+        "Modelo mixto",
+        "Otro",
+        "No lo sé"
+      ],
+      "notes": []
+    },
+    {
+      "number": 14,
+      "label": "¿Estaría dispuesto/a a participar en una fase piloto o probar KALY con usuarios voluntarios?",
+      "type": "Respuesta única",
+      "options": [
+        "Sí",
+        "Tal vez",
+        "No"
+      ],
+      "notes": []
+    },
+    {
+      "number": 15,
+      "label": "¿Desea añadir algún comentario o recomendación sobre KALY?",
+      "type": "Respuesta abierta",
+      "options": [
+        "Texto libre"
+      ],
+      "notes": []
+    }
+  ]
+}
