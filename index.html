@@ -7,8 +7,8 @@
   <meta name="description" content="KALY — application de suivi du Food Noise et des comportements alimentaires associés, pour repérer des tendances et faciliter le dialogue avec les professionnels de santé.">
   <title>KALY — Food Noise & Metabolic Tracking</title>
   <link rel="icon" type="image/png" href="assets/kaly_icon.png">
-  <link rel="stylesheet" href="css/style.css?v=17">
-  <script defer src="js/script.js?v=17"></script>
+  <link rel="stylesheet" href="css/style.css?v=19">
+  <script defer src="js/script.js?v=19"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
@@ -96,9 +96,6 @@
         </div>
         <div class="section-text about-content">
           <p class="large-text" data-i18n="aboutLead">KALY est une application qui permet de suivre le Food Noise et de mieux comprendre les comportements alimentaires associés.</p>
-          <details class="site-details about-details">
-            <summary data-i18n="moreInfo">En savoir plus</summary>
-            <div class="site-details-content">
           <div class="about-group">
             <p data-i18n="aboutRecordIntro">Elle aide à enregistrer les épisodes de Food Noise (bruit alimentaire), notamment :</p>
             <ul class="about-list">
@@ -118,8 +115,6 @@
             </ul>
           </div>
           <p data-i18n="aboutProfessional">Les informations recueillies peuvent faciliter le suivi personnel et favoriser le dialogue avec les professionnels de santé — médecins, psychologues et nutritionnistes — en apportant des éléments concrets pour préparer les consultations et accompagner le suivi.</p>
-            </div>
-          </details>
         </div>
       </div>
     </section>
@@ -137,25 +132,42 @@
             <div class="feature-top"><span class="feature-number">01</span><span class="feature-tag">TRACK</span></div><span class="audience-label audience-user" data-i18n="spaceAudienceUser">Pour l’utilisateur</span>
             <h3 data-i18n="trackTitle">Observer et enregistrer</h3>
             <p data-i18n="trackText">Documenter un épisode de Food Noise, son intensité, son contexte, les pensées, les émotions, la faim ressentie et les éléments associés.</p>
-            <details class="feature-details"><summary data-i18n="moreInfo">En savoir plus</summary><ul><li data-i18n="trackItem1">Situation et contexte</li><li data-i18n="trackItem2">Pensées, émotions et faim</li><li data-i18n="trackItem3">Aliments et comportements associés</li></ul></details>
+            <ul><li data-i18n="trackItem1">Situation et contexte</li><li data-i18n="trackItem2">Pensées, émotions et faim</li><li data-i18n="trackItem3">Aliments et comportements associés</li></ul>
           </article>
           <article class="feature-card feature-analysis">
             <div class="feature-top"><span class="feature-number">02</span><span class="feature-tag">ANALYSES</span></div><span class="audience-label audience-both" data-i18n="spaceAudienceBoth">Utilisateur et professionnel de santé</span>
             <h3 data-i18n="analysisTitle">Mettre en perspective</h3>
             <p data-i18n="analysisText">Mettre en regard les observations comportementales et les informations métaboliques disponibles, avec leurs dates et leur contexte.</p>
-            <details class="feature-details"><summary data-i18n="moreInfo">En savoir plus</summary><ul><li data-i18n="analysisItem1">Repérage de tendances individuelles</li><li data-i18n="analysisItem2">Sommeil et traitements déclarés</li><li data-i18n="analysisItem3">Données biologiques renseignées</li></ul></details>
+            <ul><li data-i18n="analysisItem1">Repérage de tendances individuelles</li><li data-i18n="analysisItem2">Sommeil et traitements déclarés</li><li data-i18n="analysisItem3">Données biologiques renseignées</li></ul>
           </article>
           <article class="feature-card feature-evolution">
             <div class="feature-top"><span class="feature-number">03</span><span class="feature-tag">EVOLUTION</span></div><span class="audience-label audience-both" data-i18n="spaceAudienceBoth">Utilisateur et professionnel de santé</span>
             <h3 data-i18n="evolutionTitle">Suivre les changements</h3>
             <p data-i18n="evolutionText">Visualiser les observations dans le temps et préparer une synthèse chronologique destinée à faciliter le dialogue avec un professionnel.</p>
-            <details class="feature-details"><summary data-i18n="moreInfo">En savoir plus</summary><ul><li data-i18n="evolutionItem1">Historique et chronologie</li><li data-i18n="evolutionItem2">Évolution des observations</li><li data-i18n="evolutionItem3">Synthèse partageable au choix de l’utilisateur</li></ul></details>
+            <ul><li data-i18n="evolutionItem1">Historique et chronologie</li><li data-i18n="evolutionItem2">Évolution des observations</li><li data-i18n="evolutionItem3">Synthèse partageable au choix de l’utilisateur</li></ul>
           </article>
           </div>
           <div class="features-visual">
             <img src="assets/kaly-app-phones.png" alt="Aperçu de l’application KALY sur trois écrans de téléphone" loading="lazy">
           </div>
         </div>
+
+        <section class="tracker-flow" aria-labelledby="tracker-flow-title">
+          <div class="tracker-flow-heading">
+            <p class="eyebrow" data-i18n="trackerEyebrow">LE PARCOURS TRACKER</p>
+            <h3 id="tracker-flow-title" data-i18n="trackerTitle">Un épisode, six étapes courtes</h3>
+            <p data-i18n="trackerIntro">L’utilisateur avance étape par étape. Les réponses sont courtes et décrivent le contexte, sans chercher à tout expliquer.</p>
+          </div>
+          <ol class="tracker-steps">
+            <li><span class="tracker-step-number">01</span><div><h4 data-i18n="step1Title">Situation</h4><p data-i18n="step1Text">Où êtes-vous et que se passe-t-il ?</p></div></li>
+            <li><span class="tracker-step-number">02</span><div><h4 data-i18n="step2Title">Pensées et intensité</h4><p data-i18n="step2Text">Quelles pensées sont présentes et quelle est leur intensité ?</p></div></li>
+            <li><span class="tracker-step-number">03</span><div><h4 data-i18n="step3Title">Corps et faim</h4><p data-i18n="step3Text">Quelles sensations remarquez-vous ? Avez-vous faim ?</p></div></li>
+            <li><span class="tracker-step-number">04</span><div><h4 data-i18n="step4Title">Émotions et contexte</h4><p data-i18n="step4Text">Quelle émotion ou quel élément de contexte est présent ?</p></div></li>
+            <li><span class="tracker-step-number">05</span><div><h4 data-i18n="step5Title">Action et intention</h4><p data-i18n="step5Text">Qu’avez-vous fait ou envisagé de faire ?</p></div></li>
+            <li><span class="tracker-step-number">06</span><div><h4 data-i18n="step6Title">Résultat et ressenti</h4><p data-i18n="step6Text">Que s’est-il passé ensuite et comment vous sentez-vous ?</p></div></li>
+          </ol>
+        </section>
+
         <p class="development-note" data-i18n="howDevelopment">Certaines fonctionnalités sont encore en cours de conception. Leur présentation ne signifie pas qu’elles sont déjà disponibles.</p>
       </div>
     </section>
@@ -168,10 +180,10 @@
           <p data-i18n="audienceIntro">KALY s’adresse aux personnes qui souhaitent mieux décrire leur expérience alimentaire et disposer d’un suivi plus contextualisé.</p>
         </div>
         <div class="audience-grid">
-          <article class="audience-card card-peach"><span class="card-index">01</span><h3 data-i18n="aud1Title">Pensées alimentaires répétitives</h3><details class="site-details audience-details"><summary data-i18n="moreInfo">En savoir plus</summary><div class="site-details-content"><p data-i18n="aud1Text">Personnes qui souhaitent observer la fréquence, l’intensité et le contexte de leurs pensées ou envies alimentaires.</p></div></details></article>
-          <article class="audience-card card-mint"><span class="card-index">02</span><h3 data-i18n="aud2Title">Comportements et relation à l’alimentation</h3><details class="site-details audience-details"><summary data-i18n="moreInfo">En savoir plus</summary><div class="site-details-content"><p data-i18n="aud2Text">Personnes qui veulent mieux documenter les situations, émotions, sensations de faim et comportements associés à l’alimentation.</p></div></details></article>
-          <article class="audience-card card-blue"><span class="card-index">03</span><h3 data-i18n="aud3Title">Suivi métabolique et traitements</h3><details class="site-details audience-details"><summary data-i18n="moreInfo">En savoir plus</summary><div class="site-details-content"><p data-i18n="aud3Text">Notamment les personnes concernées par le diabète de type 2, le surpoids ou l’obésité, y compris celles qui suivent un traitement GLP-1 ou GIP.</p></div></details></article>
-          <article class="audience-card card-lavender"><span class="card-index">04</span><h3 data-i18n="aud4Title">Dialogue avec les professionnels</h3><details class="site-details audience-details"><summary data-i18n="moreInfo">En savoir plus</summary><div class="site-details-content"><p data-i18n="aud4Text">Personnes qui souhaitent préparer leurs consultations à partir d’un historique structuré qu’elles peuvent choisir de partager.</p></div></details></article>
+          <article class="audience-card card-peach"><span class="card-index">01</span><h3 data-i18n="aud1Title">Pensées alimentaires répétitives</h3><p data-i18n="aud1Text">Personnes qui souhaitent observer la fréquence, l’intensité et le contexte de leurs pensées ou envies alimentaires.</p></article>
+          <article class="audience-card card-mint"><span class="card-index">02</span><h3 data-i18n="aud2Title">Comportements et relation à l’alimentation</h3><p data-i18n="aud2Text">Personnes qui veulent mieux documenter les situations, émotions, sensations de faim et comportements associés à l’alimentation.</p></article>
+          <article class="audience-card card-blue"><span class="card-index">03</span><h3 data-i18n="aud3Title">Suivi métabolique et traitements</h3><p data-i18n="aud3Text">Notamment les personnes concernées par le diabète de type 2, le surpoids ou l’obésité, y compris celles qui suivent un traitement GLP-1 ou GIP.</p></article>
+          <article class="audience-card card-lavender"><span class="card-index">04</span><h3 data-i18n="aud4Title">Dialogue avec les professionnels</h3><p data-i18n="aud4Text">Personnes qui souhaitent préparer leurs consultations à partir d’un historique structuré qu’elles peuvent choisir de partager.</p></article>
         </div>
       </div>
     </section>
@@ -185,8 +197,8 @@
             <p class="professional-main-intro" data-i18n="proDynamicIntro">Un épisode isolé ne raconte pas toute l’histoire. Mis en perspective dans le temps, les enregistrements peuvent faire apparaître des repères utiles pour préparer un échange.</p>
           </div>
           <div class="professional-benefits">
-            <article class="professional-benefit"><span class="professional-benefit-number">01</span><div><h3 data-i18n="proCard4Title">Préparer la consultation</h3><details class="site-details"><summary data-i18n="moreInfo">En savoir plus</summary><div class="site-details-content"><p data-i18n="proItem4">Résumé chronologique des observations pour préparer une consultation.</p></div></details></div></article>
-            <article class="professional-benefit"><span class="professional-benefit-number">02</span><div><h3 data-i18n="proAnalysisTitle">Analyser les comportements et leur évolution</h3><details class="site-details"><summary data-i18n="moreInfo">En savoir plus</summary><div class="site-details-content"><p data-i18n="proAnalysisText">Mettre en perspective les épisodes et les informations renseignées pour repérer des tendances au fil du temps.</p><ul><li data-i18n="proBenefit1">Des échanges potentiellement plus ciblés et un temps de consultation mieux préparé.</li><li data-i18n="proBenefit2">Des évolutions repérées plus tôt, pour faciliter une discussion rapide sur la conduite à tenir.</li></ul></div></details></div></article>
+            <article class="professional-benefit"><span class="professional-benefit-number">01</span><div><h3 data-i18n="proCard4Title">Préparer la consultation</h3><p data-i18n="proItem4">Résumé chronologique des observations pour préparer une consultation.</p></div></article>
+            <article class="professional-benefit"><span class="professional-benefit-number">02</span><div><h3 data-i18n="proAnalysisTitle">Analyser les comportements et leur évolution</h3><p data-i18n="proAnalysisText">Mettre en perspective les épisodes et les informations renseignées pour repérer des tendances au fil du temps.</p><ul><li data-i18n="proBenefit1">Des échanges potentiellement plus ciblés et un temps de consultation mieux préparé.</li><li data-i18n="proBenefit2">Des évolutions repérées plus tôt, pour faciliter une discussion rapide sur la conduite à tenir.</li></ul></div></article>
           </div>
           <p class="professional-main-context" data-i18n="proContext">Mis en perspective dans le temps, les enregistrements peuvent faire apparaître des repères utiles pour préparer un échange.</p>
           <p class="professional-main-limit" data-i18n="proLimit">Ces informations constituent des observations déclaratives. Elles ne remplacent pas l’entretien, l’examen ni le jugement clinique du professionnel et ne permettent pas, à elles seules, d’établir un diagnostic ou une causalité.</p>
@@ -210,15 +222,49 @@
           <p data-i18n="contactIntro">Pour toute question sur le projet ou le site, vous pouvez nous écrire à l’aide du formulaire.</p>
           <p class="contact-mail"><span data-i18n="contactMailFallback">Vous pouvez également écrire à</span> <a href="mailto:contact@kalyfn.com">contact@kalyfn.com</a></p>
         </div>
+
         <form class="contact-form" id="contact-form">
-          <label for="contact-name" data-i18n="contactName">Nom</label><input id="contact-name" name="name" type="text" autocomplete="name" required>
-          <label for="contact-email" data-i18n="contactEmail">Adresse e-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" required>
-          <label for="contact-subject" data-i18n="contactSubject">Objet</label><input id="contact-subject" name="subject" type="text" required>
-          <label for="contact-message" data-i18n="contactMessage">Message</label><textarea id="contact-message" name="message" rows="5" required></textarea>
-          <p class="form-privacy" data-i18n="contactPrivacy">Les informations saisies servent uniquement à répondre à votre demande. N’envoyez pas de données de santé ou d’informations médicales sensibles.</p>
-          <div class="form-honeypot" aria-hidden="true"><label for="contact-website">Ne pas remplir</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
-          <button type="submit" class="contact-submit" data-i18n="contactSend">Envoyer</button>
+          <label for="contact-type" data-i18n="contactTypeLabel">Quel est le motif de votre demande ?</label>
+          <select id="contact-type" name="requestType" required>
+            <option value="" data-i18n="contactTypePlaceholder">Choisir un motif</option>
+            <option value="general" data-i18n="contactTypeGeneral">Question générale sur KALY</option>
+            <option value="professional" data-i18n="contactTypeProfessional">Professionnel de santé ou partenariat</option>
+            <option value="participation" data-i18n="contactTypeParticipation">Participer aux tests ou au développement</option>
+            <option value="other" data-i18n="contactTypeOther">Autre demande</option>
+          </select>
+
+          <div id="contact-fields" class="contact-fields" hidden>
+            <label for="contact-name" data-i18n="contactName">Nom</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required>
+            <label for="contact-email" data-i18n="contactEmail">Adresse e-mail</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required>
+
+            <div class="contact-conditional" id="professional-fields" hidden>
+              <label for="contact-organization" data-i18n="contactOrganization">Organisation ou établissement</label>
+              <input id="contact-organization" name="organization" type="text" autocomplete="organization">
+              <label for="contact-function" data-i18n="contactFunction">Votre fonction</label>
+              <input id="contact-function" name="function" type="text">
+            </div>
+
+            <div class="contact-conditional" id="participation-fields" hidden>
+              <label for="contact-participation" data-i18n="contactParticipation">Comment souhaitez-vous participer ?</label>
+              <select id="contact-participation" name="participation">
+                <option value="" data-i18n="participationChoose">Choisir une option</option>
+                <option value="test" data-i18n="participationTest">Tester l’application</option>
+                <option value="feedback" data-i18n="participationFeedback">Donner un retour ou proposer des améliorations</option>
+                <option value="contribute" data-i18n="participationContribute">Contribuer au développement du projet</option>
+              </select>
+            </div>
+
+            <label for="contact-subject" data-i18n="contactSubject">Objet</label>
+            <input id="contact-subject" name="subject" type="text" required>
+            <label for="contact-message" data-i18n="contactMessage">Message</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+            <p class="form-privacy" data-i18n="contactPrivacy">Les informations saisies servent uniquement à répondre à votre demande. N’envoyez pas de données de santé ou d’informations médicales sensibles.</p>
+            <div class="form-honeypot" aria-hidden="true"><label for="contact-website">Ne pas remplir</label><input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="contact-submit" data-i18n="contactSend">Envoyer</button>
+          </div>
         </form>
       </div>
     </section>
