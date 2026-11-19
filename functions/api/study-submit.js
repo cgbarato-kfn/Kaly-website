@@ -1,6 +1,6 @@
 const MAX_BODY_BYTES = 40 * 1024;
 const SCHEMA_VERSION = "V0.3";
-const ALLOWED_PROFILES = new Set(["user", "pro"]);
+const ALLOWED_PROFILES = new Set(["user", "professional"]);
 const ALLOWED_LANGUAGES = new Set(["fr", "es"]);
 
 function json(data, status = 200) {
