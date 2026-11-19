@@ -671,3 +671,33 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
   .mobile-nav { padding: 0 24px 18px; gap: 14px; flex-direction: column; }
   .mobile-nav:not([hidden]) { display: flex; }
 }
+
+
+/* V19 — Tracker six-step preview */
+.tracker-flow {
+  margin-top: 30px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(226, 240, 230, .42);
+}
+.tracker-flow-heading { max-width: 720px; margin-bottom: 20px; }
+.tracker-flow-heading h3 { margin: 7px 0 8px; color: var(--kaly-dark); font-size: clamp(1.25rem, 2vw, 1.65rem); }
+.tracker-flow-heading > p:last-child { margin: 0; color: var(--muted, #65727a); }
+.tracker-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.tracker-steps li { display: flex; gap: 12px; align-items: flex-start; min-width: 0; padding: 15px; border-radius: 14px; background: rgba(255,255,255,.88); }
+.tracker-step-number { flex: 0 0 34px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--kaly-dark); color: white; font-size: .78rem; font-weight: 700; }
+.tracker-steps h4 { margin: 1px 0 5px; color: var(--kaly-dark); font-size: .98rem; }
+.tracker-steps p { margin: 0; color: var(--muted, #65727a); font-size: .9rem; line-height: 1.45; }
+.contact-form select { width: 100%; padding: 13px 15px; border: 1px solid rgba(41,61,76,.2); border-radius: 12px; background: #fff; color: var(--kaly-dark); font: inherit; }
+.contact-form select:focus { outline: 2px solid rgba(110,132,116,.28); border-color: var(--kaly-green); }
+.contact-fields { display: grid; gap: 10px; }
+.contact-fields[hidden], .contact-conditional[hidden] { display: none !important; }
+.contact-conditional { display: grid; gap: 10px; }
+@media (max-width: 760px) {
+  .tracker-flow { margin-top: 22px; padding: 18px 15px; }
+  .tracker-steps { grid-template-columns: 1fr; gap: 9px; }
+  .tracker-steps li { padding: 12px; }
+}
+
+.form-honeypot { display: none !important; }
