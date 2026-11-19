@@ -7,8 +7,8 @@
   <meta name="description" content="KALY — application de suivi du Food Noise et des comportements alimentaires associés, pour repérer des tendances et faciliter le dialogue avec les professionnels de santé.">
   <title>KALY — Food Noise & Metabolic Tracking</title>
   <link rel="icon" type="image/png" href="assets/kaly_icon.png">
-  <link rel="stylesheet" href="css/style.css?v=19">
-  <script defer src="js/script.js?v=19"></script>
+  <link rel="stylesheet" href="css/style.css?v=20">
+  <script defer src="js/script.js?v=20"></script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
@@ -96,6 +96,9 @@
         </div>
         <div class="section-text about-content">
           <p class="large-text" data-i18n="aboutLead">KALY est une application qui permet de suivre le Food Noise et de mieux comprendre les comportements alimentaires associés.</p>
+          <details class="compact-details">
+            <summary data-i18n="moreAboutRecords">Voir les éléments suivis</summary>
+            <div class="details-content">
           <div class="about-group">
             <p data-i18n="aboutRecordIntro">Elle aide à enregistrer les épisodes de Food Noise (bruit alimentaire), notamment :</p>
             <ul class="about-list">
@@ -115,6 +118,8 @@
             </ul>
           </div>
           <p data-i18n="aboutProfessional">Les informations recueillies peuvent faciliter le suivi personnel et favoriser le dialogue avec les professionnels de santé — médecins, psychologues et nutritionnistes — en apportant des éléments concrets pour préparer les consultations et accompagner le suivi.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -132,19 +137,19 @@
             <div class="feature-top"><span class="feature-number">01</span><span class="feature-tag">TRACK</span></div><span class="audience-label audience-user" data-i18n="spaceAudienceUser">Pour l’utilisateur</span>
             <h3 data-i18n="trackTitle">Observer et enregistrer</h3>
             <p data-i18n="trackText">Documenter un épisode de Food Noise, son intensité, son contexte, les pensées, les émotions, la faim ressentie et les éléments associés.</p>
-            <ul><li data-i18n="trackItem1">Situation et contexte</li><li data-i18n="trackItem2">Pensées, émotions et faim</li><li data-i18n="trackItem3">Aliments et comportements associés</li></ul>
+            <details class="compact-details feature-details"><summary data-i18n="moreTrackDetails">Voir les informations enregistrées</summary><div class="details-content"><ul><li data-i18n="trackItem1">Situation et contexte</li><li data-i18n="trackItem2">Pensées, émotions et faim</li><li data-i18n="trackItem3">Aliments et comportements associés</li></ul></div></details>
           </article>
           <article class="feature-card feature-analysis">
             <div class="feature-top"><span class="feature-number">02</span><span class="feature-tag">ANALYSES</span></div><span class="audience-label audience-both" data-i18n="spaceAudienceBoth">Utilisateur et professionnel de santé</span>
             <h3 data-i18n="analysisTitle">Mettre en perspective</h3>
             <p data-i18n="analysisText">Mettre en regard les observations comportementales et les informations métaboliques disponibles, avec leurs dates et leur contexte.</p>
-            <ul><li data-i18n="analysisItem1">Repérage de tendances individuelles</li><li data-i18n="analysisItem2">Sommeil et traitements déclarés</li><li data-i18n="analysisItem3">Données biologiques renseignées</li></ul>
+            <details class="compact-details feature-details"><summary data-i18n="moreAnalysisDetails">Voir les éléments analysés</summary><div class="details-content"><ul><li data-i18n="analysisItem1">Repérage de tendances individuelles</li><li data-i18n="analysisItem2">Sommeil et traitements déclarés</li><li data-i18n="analysisItem3">Données biologiques renseignées</li></ul></div></details>
           </article>
           <article class="feature-card feature-evolution">
             <div class="feature-top"><span class="feature-number">03</span><span class="feature-tag">EVOLUTION</span></div><span class="audience-label audience-both" data-i18n="spaceAudienceBoth">Utilisateur et professionnel de santé</span>
             <h3 data-i18n="evolutionTitle">Suivre les changements</h3>
             <p data-i18n="evolutionText">Visualiser les observations dans le temps et préparer une synthèse chronologique destinée à faciliter le dialogue avec un professionnel.</p>
-            <ul><li data-i18n="evolutionItem1">Historique et chronologie</li><li data-i18n="evolutionItem2">Évolution des observations</li><li data-i18n="evolutionItem3">Synthèse partageable au choix de l’utilisateur</li></ul>
+            <details class="compact-details feature-details"><summary data-i18n="moreEvolutionDetails">Voir les éléments de suivi</summary><div class="details-content"><ul><li data-i18n="evolutionItem1">Historique et chronologie</li><li data-i18n="evolutionItem2">Évolution des observations</li><li data-i18n="evolutionItem3">Synthèse partageable au choix de l’utilisateur</li></ul></div></details>
           </article>
           </div>
           <div class="features-visual">
@@ -196,12 +201,17 @@
             <h2 id="professional-callout-title" data-i18n="proTitle">Des informations structurées pour accompagner le dialogue</h2>
             <p class="professional-main-intro" data-i18n="proDynamicIntro">Un épisode isolé ne raconte pas toute l’histoire. Mis en perspective dans le temps, les enregistrements peuvent faire apparaître des repères utiles pour préparer un échange.</p>
           </div>
+          <details class="compact-details professional-details">
+            <summary data-i18n="moreProfessional">Voir les apports possibles</summary>
+            <div class="details-content">
           <div class="professional-benefits">
             <article class="professional-benefit"><span class="professional-benefit-number">01</span><div><h3 data-i18n="proCard4Title">Préparer la consultation</h3><p data-i18n="proItem4">Résumé chronologique des observations pour préparer une consultation.</p></div></article>
             <article class="professional-benefit"><span class="professional-benefit-number">02</span><div><h3 data-i18n="proAnalysisTitle">Analyser les comportements et leur évolution</h3><p data-i18n="proAnalysisText">Mettre en perspective les épisodes et les informations renseignées pour repérer des tendances au fil du temps.</p><ul><li data-i18n="proBenefit1">Des échanges potentiellement plus ciblés et un temps de consultation mieux préparé.</li><li data-i18n="proBenefit2">Des évolutions repérées plus tôt, pour faciliter une discussion rapide sur la conduite à tenir.</li></ul></div></article>
           </div>
           <p class="professional-main-context" data-i18n="proContext">Mis en perspective dans le temps, les enregistrements peuvent faire apparaître des repères utiles pour préparer un échange.</p>
           <p class="professional-main-limit" data-i18n="proLimit">Ces informations constituent des observations déclaratives. Elles ne remplacent pas l’entretien, l’examen ni le jugement clinique du professionnel et ne permettent pas, à elles seules, d’établir un diagnostic ou une causalité.</p>
+            </div>
+          </details>
         </section>
       </div>
     </section>
