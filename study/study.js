@@ -70,6 +70,7 @@ function isSelect(type) {
 function isPrice(q) { return q.number === 26 && profile === "user"; }
 
 
+
 function priceOptions(country) {
   const all = getQuestionSet().find(q => q.number === 26).options;
 
@@ -89,33 +90,37 @@ function priceOptions(country) {
     "Francia:", "Colombia:", "Perú:", "México:"
   ];
 
+  const isTechnicalNote = option =>
+    /^(?:Note\s+d['’]intégration|Nota\s+de\s+integración)\s*:/i.test(option.trim());
+
   const fixed = all.filter(option =>
-    !pricePrefixes.some(prefix => option.startsWith(prefix)) &&
-    !/^(Note d’intégration|Nota de integración)/i.test(option)
+    !pricePrefixes.some(prefix => option.trim().startsWith(prefix)) &&
+    !isTechnicalNote(option)
   );
 
   const selectedPrefix = countryPrefixes[country || ""];
+
   const local = selectedPrefix
-    ? all.filter(option => option.startsWith(selectedPrefix))
+    ? all.filter(option => option.trim().startsWith(selectedPrefix))
     : [];
 
   return [...fixed.slice(0, 1), ...local, ...fixed.slice(1)];
-}
-;
-  const prefix = currencyRows[countryName] || [];
-  const fixed = all.filter(o => !/^(France|Colombie|Pérou|Mexique) :/.test(o));
-  const local = prefix.length ? all.filter(o => o.startsWith(prefix[0])) : [];
-  return [...fixed.slice(0,1), ...local, ...fixed.slice(1)];
 }
 
 function getOptions(q) {
   if (isPrice(q)) {
     const country = answers["1"];
-    if (!country || /autre|other/i.test(country) || /prefiero no|préfère pas/i.test(country)) return priceOptions("");
+    if (!country || /autre|other/i.test(country) || /prefiero no|préfère pas/i.test(country)) {
+      return priceOptions("");
+    }
     return priceOptions(country);
   }
-  return q.options.filter(o => !/^Note d’intégration/.test(o));
+
+  return q.options.filter(option =>
+    !/^(?:Note\s+d['’]intégration|Nota\s+de\s+integración)\s*:/i.test(option.trim())
+  );
 }
+
 
 function questionControl(q) {
   const type = q.type || "";
