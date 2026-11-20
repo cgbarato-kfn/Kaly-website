@@ -69,19 +69,39 @@ function isSelect(type) {
 }
 function isPrice(q) { return q.number === 26 && profile === "user"; }
 
+
 function priceOptions(country) {
   const all = getQuestionSet().find(q => q.number === 26).options;
-  const countryName = country || "";
-  const currencyRows = {
-    "France": ["France :"],
-    "Colombie": ["Colombie :"],
-    "Pérou": ["Pérou :"],
-    "Mexique": ["Mexique :"],
-    "Francia": ["France :"],
-    "Colombia": ["Colombie :"],
-    "Perú": ["Pérou :"],
-    "México": ["Mexique :"]
+
+  const countryPrefixes = {
+    "France": "France :",
+    "Colombie": "Colombie :",
+    "Pérou": "Pérou :",
+    "Mexique": "Mexique :",
+    "Francia": "Francia:",
+    "Colombia": "Colombia:",
+    "Perú": "Perú:",
+    "México": "México:"
   };
+
+  const pricePrefixes = [
+    "France :", "Colombie :", "Pérou :", "Mexique :",
+    "Francia:", "Colombia:", "Perú:", "México:"
+  ];
+
+  const fixed = all.filter(option =>
+    !pricePrefixes.some(prefix => option.startsWith(prefix)) &&
+    !/^(Note d’intégration|Nota de integración)/i.test(option)
+  );
+
+  const selectedPrefix = countryPrefixes[country || ""];
+  const local = selectedPrefix
+    ? all.filter(option => option.startsWith(selectedPrefix))
+    : [];
+
+  return [...fixed.slice(0, 1), ...local, ...fixed.slice(1)];
+}
+;
   const prefix = currencyRows[countryName] || [];
   const fixed = all.filter(o => !/^(France|Colombie|Pérou|Mexique) :/.test(o));
   const local = prefix.length ? all.filter(o => o.startsWith(prefix[0])) : [];
