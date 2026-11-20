@@ -253,7 +253,7 @@ function renderQuestion() {
     const mascot = document.createElement("img");
     const mascotIndex = (mascotSlots.indexOf(Number(q.number)) % 4) + 1;
     mascot.className = "study-mascot";
-    mascot.src = `../assets/study-mascots/KALY_Etude_0${mascotIndex}.png`;
+    mascot.src = `../assets/KALY_Etude_0${mascotIndex}.png`;
     mascot.alt = "";
     mascot.setAttribute("aria-hidden", "true");
     mascot.loading = "lazy";
