@@ -246,6 +246,19 @@ function renderQuestion() {
     card.appendChild(explainer);
   }
   card.appendChild(questionControl(q));
+
+  // Mascottes KALY : apparition ponctuelle, jamais sur chaque question.
+  const mascotSlots = profile === "user" ? [4, 9, 16, 22, 27] : [3, 7, 11, 15];
+  if (mascotSlots.includes(Number(q.number))) {
+    const mascot = document.createElement("img");
+    const mascotIndex = (mascotSlots.indexOf(Number(q.number)) % 4) + 1;
+    mascot.className = "study-mascot";
+    mascot.src = `../assets/study-mascots/KALY_Etude_0${mascotIndex}.png`;
+    mascot.alt = "";
+    mascot.setAttribute("aria-hidden", "true");
+    mascot.loading = "lazy";
+    card.appendChild(mascot);
+  }
   holder.appendChild(card);
   $("#previousButton").disabled = currentIndex === 0;
   $("#nextButton").textContent = currentIndex === activeQuestions.length - 1 ? (lang === "fr" ? "Terminer" : "Finalizar") : t("next");

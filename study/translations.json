@@ -24,7 +24,6 @@
     "changeProfile": "Changer de profil",
     "previous": "Précédent",
     "next": "Continuer",
-    "submissionNote": "Vos réponses seront envoyées de manière sécurisée à la base de données de l’étude.",
     "footer": "Étude de marché · Participation volontaire",
     "userKind": "Questionnaire utilisateurs potentiels",
     "proKind": "Questionnaire professionnels de santé",
@@ -46,7 +45,8 @@
     "no": "Non",
     "sending": "Enregistrement de vos réponses…",
     "submitted": "Votre participation a bien été enregistrée. Merci.",
-    "submitError": "L’enregistrement a échoué. Vérifiez votre connexion puis réessayez."
+    "submitError": "L’enregistrement a échoué. Vérifiez votre connexion puis réessayez.",
+    "brandLine": "Comprendre ce qui se passe, sans se juger."
   },
   "es": {
     "back": "Volver al sitio",
@@ -73,7 +73,6 @@
     "changeProfile": "Cambiar de perfil",
     "previous": "Anterior",
     "next": "Continuar",
-    "submissionNote": "Tus respuestas se enviarán de forma segura a la base de datos del estudio.",
     "footer": "Estudio de mercado · Participación voluntaria",
     "userKind": "Cuestionario para usuarios potenciales",
     "proKind": "Cuestionario para profesionales de la salud",
@@ -95,6 +94,7 @@
     "no": "No",
     "sending": "Guardando tus respuestas…",
     "submitted": "Tu participación se ha registrado correctamente. Gracias.",
-    "submitError": "No se pudieron guardar las respuestas. Comprueba tu conexión e inténtalo de nuevo."
+    "submitError": "No se pudieron guardar las respuestas. Comprueba tu conexión e inténtalo de nuevo.",
+    "brandLine": "Comprender lo que está pasando, sin juzgarse."
   }
 }

@@ -90,3 +90,31 @@ h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.08;letter-spacing:-.045em;fo
 }
 @media(max-width:380px){.back-link{font-size:0}.back-link:first-letter{font-size:.9rem}.lang-switch button{padding:7px 9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+
+/* KALY V23 — identité visuelle de l’étude */
+:root{--ink:#2F353F;--blue:#4A697D;--muted:#68727b;--line:#dfe4e5;--paper:#F8F8F8;--white:#fff;--sage:#e8eee9;--peach:#F4C69B;--mint:#C9DCCF;--lavender:#C9D2E8}
+.study-header{background:rgba(248,248,248,.97)}
+.brand img{width:118px;max-height:48px;object-fit:contain}
+.intro{position:relative;padding-top:64px}
+.intro:before{content:"";position:absolute;z-index:-1;right:-7vw;top:28px;width:min(34vw,330px);height:250px;border-radius:48% 52% 58% 42%;background:radial-gradient(circle at 35% 35%,#dce9df 0 18%,transparent 62%),radial-gradient(circle at 70% 65%,#f7dfc8 0 18%,transparent 60%);opacity:.7;filter:blur(1px)}
+.eyebrow{color:var(--blue)}
+.intro-brandline{display:flex;align-items:center;gap:12px;margin-top:28px;color:#68727b;font-size:.88rem}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;padding:5px 11px;border-radius:999px;background:#e8eee9;color:#4A697D;font-size:.72rem;font-weight:800;letter-spacing:.12em}
+.intro-facts div{border-top:2px solid #c9d8d0}
+.profile-card{overflow:hidden;border-color:#dfe5e2;background:linear-gradient(145deg,#fff 0%,#fff 78%,#f1f5f1 100%)}
+.profile-card:nth-child(2){background:linear-gradient(145deg,#fff 0%,#fff 78%,#f8eee5 100%)}
+.profile-card:hover{border-color:#91a9a0}
+.card-index{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#e8eee9}
+.profile-card:nth-child(2) .card-index{background:#f8e8d9}
+.progress-track span{background:linear-gradient(90deg,#4A697D,#91a99a)}
+.question-card{position:relative;overflow:hidden;border-color:#dce4e0;box-shadow:0 12px 35px rgba(47,53,63,.045);padding-bottom:90px}
+.question-card:after{content:"";position:absolute;right:-55px;bottom:-78px;width:190px;height:150px;border-radius:50%;background:radial-gradient(circle,#e8eee9 0 30%,#f5e8dc 72%,transparent 73%);opacity:.55;pointer-events:none}
+.study-mascot{position:absolute;right:20px;bottom:8px;width:104px;height:88px;object-fit:contain;object-position:center bottom;z-index:1;pointer-events:none}
+.form-actions{position:relative;z-index:2}
+.primary-button{background:#4A697D;border-color:#4A697D}
+.primary-button:hover{background:#38586d}
+.submit-message{border:1px solid #d8e5dc;background:#edf3ef}
+.submit-message.error{border-color:#e7c5c2;background:#fbefee;color:#9a403b}
+.study-footer{background:#f1f4f1}
+@media(max-width:700px){.intro{padding-top:42px}.intro:before{right:-18px;top:12px;width:180px;height:150px;opacity:.45}.intro-brandline{margin-top:22px;font-size:.8rem}.study-mascot{width:78px;height:68px;right:12px;bottom:6px}.question-card{padding-bottom:76px}}
