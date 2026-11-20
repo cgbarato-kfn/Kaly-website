@@ -800,3 +800,20 @@ h2 { margin: 0; color: var(--kaly-dark); font-size: clamp(2rem, 3.8vw, 3.25rem);
  .contact-section { padding-top:36px; padding-bottom:36px; }
  .contact-grid { grid-template-columns:1fr; gap:14px; }
 }
+/* Accès direct à l'étude KALY */
+.desktop-nav .study-nav-link,
+.mobile-nav .study-nav-link {
+  background: var(--kaly-green);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.desktop-nav .study-nav-link:hover,
+.mobile-nav .study-nav-link:hover {
+  background: var(--kaly-dark);
+  color: #fff;
+}
