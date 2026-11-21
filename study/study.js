@@ -1,3 +1,4 @@
+
 let QDATA = {};
 let T = {};
 let lang = "fr";
@@ -6,32 +7,70 @@ let currentIndex = 0;
 let answers = {};
 let activeQuestions = [];
 
+const LANGUAGE_STORAGE_KEY = "kaly-study-language";
+
 const $ = (s) => document.querySelector(s);
 const t = (key) => (T[lang] && T[lang][key]) || key;
+
+function getPreferredLanguage() {
+  try {
+    const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    if (saved && ["fr", "es"].includes(saved)) return saved;
+  } catch (error) {
+    console.warn("KALY language preference unavailable:", error);
+  }
+
+  const browserLanguages = navigator.languages || [navigator.language];
+
+  for (const browserLanguage of browserLanguages) {
+    const normalized = (browserLanguage || "").toLowerCase();
+
+    if (normalized.startsWith("fr")) return "fr";
+    if (normalized.startsWith("es")) return "es";
+  }
+
+  return "fr";
+}
 
 async function loadData() {
   const [q, tr] = await Promise.all([
     fetch("questionnaires.json").then(r => r.json()),
     fetch("translations.json").then(r => r.json())
   ]);
-  QDATA = q; T = tr;
-  setLanguage("fr");
+
+  QDATA = q;
+  T = tr;
+
+  setLanguage(getPreferredLanguage(), false);
 }
 
-function setLanguage(next) {
-  lang = next;
+function setLanguage(next, savePreference = true) {
+  lang = T[next] ? next : "fr";
+
   document.documentElement.lang = lang;
+
+  if (savePreference) {
+    try {
+      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+    } catch (error) {
+      console.warn("KALY language preference could not be saved:", error);
+    }
+  }
+
   document.querySelectorAll("[data-t]").forEach(el => {
     const key = el.dataset.t;
     if (T[lang][key]) el.textContent = T[lang][key];
   });
+
   document.querySelectorAll("[data-lang]").forEach(btn => {
     const active = btn.dataset.lang === lang;
     btn.classList.toggle("active", active);
     btn.setAttribute("aria-pressed", String(active));
   });
+
   if (profile) renderQuestion();
 }
+
 
 function getQuestionSet() {
   return QDATA[`${profile}_${lang}`] || [];
@@ -384,8 +423,11 @@ $("#nextButton").addEventListener("click", () => {
   } else {
     submitSurvey();
   }
-});
-document.querySelectorAll("[data-lang]").forEach(btn => btn.addEventListener("click", () => { if (!profile) setLanguage(btn.dataset.lang); }));
+});document.querySelectorAll("[data-lang]").forEach(btn =>
+  btn.addEventListener("click", () => {
+    if (!profile) setLanguage(btn.dataset.lang, true);
+  })
+);
 loadData().catch(() => {
   $("#intro").insertAdjacentHTML("beforeend", '<p class="error">Impossible de charger les questionnaires. Veuillez réessayer.</p>');
 });
