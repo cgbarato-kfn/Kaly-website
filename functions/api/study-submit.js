@@ -55,9 +55,11 @@ export async function onRequestPost({ request, env }) {
   const maxQuestion = respondentType === "user" ? 28 : 15;
   const answers = {};
   for (const [key, value] of Object.entries(data.answers)) {
-    if (!/^(?:[1-9]|1\d|2[0-8])$/.test(key) || Number(key) > maxQuestion || !validAnswer(value)) {
-      return json({ success: false, error: "Invalid answer data" }, 400);
-    }
+const match = key.match(/^([1-9]|1\d|2[0-8])(?:_other)?$/);
+
+if (!match || Number(match[1]) > maxQuestion || !validAnswer(value)) {
+  return json({ success: false, error: "Invalid answer data" }, 400);
+}
     answers[key] = value;
   }
 
